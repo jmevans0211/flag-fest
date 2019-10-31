@@ -47,6 +47,9 @@ class ChooseRegion extends Component {
         <Link to='/flag-fest/play'>
           <h4 className="play-button">Play!</h4>
         </Link>
+        <Link to=''>
+          <h4 className="back-button">Back</h4>
+        </Link>
       </main>
     )
   }

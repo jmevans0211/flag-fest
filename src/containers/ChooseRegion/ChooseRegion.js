@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import { fetchData } from './../../utils/apiCalls';
 import { cleanCountryData } from './../../utils/helpers';
+import { saveCountries } from '../../actions';
 import './ChooseRegion.scss'
 
 class ChooseRegion extends Component {
@@ -36,7 +39,7 @@ class ChooseRegion extends Component {
   }
 
   filterCountries = async () => {
-    // const { prop } = this.props
+    const { saveCountries } = this.props
 
     try {
       // isLoading(true)
@@ -45,7 +48,7 @@ class ChooseRegion extends Component {
       const regionalData = cleanCountriesData.filter(country => {
         return country.region === this.state.region
       })
-      console.log(regionalData)
+      saveCountries(regionalData)
     } catch {
       // isLoading(false)
       //handleError()
@@ -81,4 +84,12 @@ class ChooseRegion extends Component {
 
 }
 
-export default ChooseRegion;
+const mapDispatchToProps = dispatch => ({
+  saveCountries: countries => dispatch(saveCountries)
+})
+
+export default connect(null, mapDispatchToProps)(ChooseRegion);
+// export const mapDispatchToProps = dispatch => ({
+//   retrieveFavorited: favorited => dispatch(retrieveFavorited(favorited)),
+//   saveUser: currentUser => dispatch(saveUser(currentUser))
+// })

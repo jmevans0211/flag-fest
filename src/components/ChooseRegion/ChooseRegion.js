@@ -11,11 +11,18 @@ class ChooseRegion extends Component {
     }
   }
 
+  handleClick = (e, region) => {
+    if (region === 'africa') {
+      this.setState({ region: 'Africa'})
+    }
+  }
+
   render() {
+    console.log(this.state)
     return (
       <main>
         <h1>Choose a Region</h1>
-        <img id="africa" className="region" src="https://svgsilh.com/svg/151640.svg" />
+        <img id="africa" className="region" onClick={(e) => this.handleClick(e, 'africa')} src="https://svgsilh.com/svg/151640.svg" />
         <img id="europe" className="region" src="https://svgsilh.com/svg/151641.svg" />
         <img id="asia-aus" className="region" src="https://svgsilh.com/svg/307197.svg" />
         <img id="americas" className="region" src="https://svgsilh.com/svg_v2/714733.svg" />

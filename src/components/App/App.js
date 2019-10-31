@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <main>
         <Route exact path='/' render={ () => <StartPage />}/>
-        <Route exact path='/choose-region' render={ () => <ChooseRegion />}/>
+        <Route exact path='/flag-fest' render={ () => <ChooseRegion />}/>
       </main>
     )
 

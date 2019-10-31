@@ -45,7 +45,9 @@ class ChooseRegion extends Component {
           <button type="button" onClick={() => this.handleFlagAmount('all')}>All Flags for this Region</button>
           <button type="button" onClick={() => this.handleFlagAmount('ten')}>Test me on 10 flags for this region</button>
         </div>
-        <button type="button" className="play-button">Play!</button>
+        <Link to='/flag-fest/play'>
+          <h4 className="play-button">Play!</h4>
+        </Link>
       </main>
     )
   }

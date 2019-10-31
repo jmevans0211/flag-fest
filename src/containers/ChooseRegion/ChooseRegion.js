@@ -48,6 +48,7 @@ class ChooseRegion extends Component {
       const regionalData = cleanCountriesData.filter(country => {
         return country.region === this.state.region
       })
+      console.log('regionalData', regionalData)
       saveCountries(regionalData)
     } catch {
       // isLoading(false)
@@ -58,7 +59,6 @@ class ChooseRegion extends Component {
   } //<---end of filterCountries
 
   render() {
-    console.log(this.state)
     return (
       <main>
         <h1>Choose a Region</h1>
@@ -85,11 +85,11 @@ class ChooseRegion extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  saveCountries: countries => dispatch(saveCountries)
+  saveCountries: countries => dispatch(saveCountries(countries))
 })
 
-export default connect(null, mapDispatchToProps)(ChooseRegion);
-// export const mapDispatchToProps = dispatch => ({
-//   retrieveFavorited: favorited => dispatch(retrieveFavorited(favorited)),
-//   saveUser: currentUser => dispatch(saveUser(currentUser))
-// })
+export const mapStateToProps = state => ({
+  countries: state.countries,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChooseRegion);

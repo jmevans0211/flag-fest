@@ -8,9 +8,11 @@ class GameContainer extends Component {
     }
   }
 
-  render (
-    // flag card
-  )
+  render() {
+    return(
+      <h1>in game container</h1>
+    )
+  }
 }
 
 export default GameContainer

@@ -18,10 +18,12 @@ class ChooseRegion extends Component {
       this.setState({ region: 'Africa' })
     } else if (region === 'europe') {
       this.setState({ region: 'Europe' })
-    } else if (region === 'asia-oceania') {
+    } else if (region === 'asia') {
       this.setState({ region: 'Asia' })
     } else if (region === 'americas') {
       this.setState({ region: 'America' })
+    } else if (region === 'oceania') {
+      this.setState({ region: 'Oceania'})
     }
   }
 
@@ -75,8 +77,9 @@ class ChooseRegion extends Component {
         <h1>Choose a Region</h1>
         <img className="region" onClick={() => this.handleRegion('africa')} src="https://svgsilh.com/svg/151640.svg" />
         <img className="region" onClick={() => this.handleRegion('europe')} src="https://svgsilh.com/svg/151641.svg" />
-        <img className="region" onClick={() => this.handleRegion('asia-oceania')} src="https://svgsilh.com/svg/307197.svg" />
+        <img className="region" onClick={() => this.handleRegion('asia')} src="https://svgsilh.com/svg/307197.svg" />
         <img className="region" onClick={() => this.handleRegion('americas')} src="https://svgsilh.com/svg_v2/714733.svg" />
+        <img className="region" onClick={() => this.handleRegion('oceania')} src="https://svgsilh.com/svg/23512.svg" />
         <div className="flag-amount-container">
           <h4>Choose How Many Flags You'd Like To Be Tested On</h4>
           <button type="button" onClick={() => this.handleFlagAmount('all')}>All Flags for this Region</button>

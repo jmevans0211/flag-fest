@@ -48,24 +48,8 @@ class ChooseRegion extends Component {
       console.log(regionalData)
     } catch {
       // isLoading(false)
+      //handleError()
     }
-    
-
-
-    // async componentDidMount() {
-    //   const { getMovies, handleError, isLoading } = this.props
-  
-    //   try {
-    //     isLoading(true)
-    //     const movies = await fetchData('https://api.themoviedb.org/3/movie/now_playing?api_key=cd7eb6a4cff8273d777385057dcf9b56')
-    //     const cleanMovies = filteredMovieData(movies.results)
-    //     isLoading(false)
-    //     getMovies(cleanMovies)
-    //   } catch {
-    //     isLoading(false)
-    //     handleError('There was an error getting your movies!')
-    //   }
-    // }
 
 
   } //<---end of filterCountries

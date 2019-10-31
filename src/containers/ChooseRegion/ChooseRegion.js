@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchData } from './../../utils/apiCalls';
+import { cleanCountryData } from './../../utils/helpers';
 import './ChooseRegion.scss'
 
 class ChooseRegion extends Component {
@@ -38,7 +39,7 @@ class ChooseRegion extends Component {
     try {
       // isLoading(true)
       const countries = await fetchData('https://restcountries.eu/rest/v2/all')
-      console.log('in try', countries)
+      console.log('in try', cleanCountryData(countries))
     } catch {
       // isLoading(false)
     }

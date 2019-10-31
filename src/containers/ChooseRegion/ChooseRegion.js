@@ -8,20 +8,20 @@ class ChooseRegion extends Component {
   constructor() {
     super();
     this.state = {
-      region: [],
+      region: '',
       tenLimit: false,
     }
   }
 
   handleRegion = (region) => {
     if (region === 'africa') {
-      this.setState({ region: ['Africa']})
+      this.setState({ region: 'Africa' })
     } else if (region === 'europe') {
-      this.setState({ region: ['Europe']})
+      this.setState({ region: 'Europe' })
     } else if (region === 'asia-oceania') {
-      this.setState({ region: ['Asia', 'Oceania'] })
+      this.setState({ region: 'Asia' })
     } else if (region === 'americas') {
-      this.setState({ region: ['America']})
+      this.setState({ region: 'America' })
     }
   }
 
@@ -39,7 +39,11 @@ class ChooseRegion extends Component {
     try {
       // isLoading(true)
       const countries = await fetchData('https://restcountries.eu/rest/v2/all')
-      console.log('in try', cleanCountryData(countries))
+      const cleanCountriesData = cleanCountryData(countries)
+      const regionalData = cleanCountriesData.filter(country => {
+        return country.region === this.state.region
+      })
+      console.log(regionalData)
     } catch {
       // isLoading(false)
     }

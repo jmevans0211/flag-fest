@@ -32,7 +32,6 @@ class ChooseRegion extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <main>
         <h1>Choose a Region</h1>

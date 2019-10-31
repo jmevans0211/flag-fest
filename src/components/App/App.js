@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import StartPage from '../StartPage/StartPage';
+import ChooseRegion from '../ChooseRegion/ChooseRegion';
 import './App.scss';
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
     return (
       <main>
         <Route exact path='/' render={ () => <StartPage />}/>
-        {/* <Route exact path='/signup' render={ () => <SignUpForm />}/> */}
+        <Route exact path='/choose-region' render={ () => <ChooseRegion />}/>
       </main>
     )
 

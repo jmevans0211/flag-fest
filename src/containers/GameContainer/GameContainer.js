@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { saveCountries } from './../../actions';
+import { saveCountries, removeCountryGuessed } from './../../actions';
 import FlagCard from './../../components/FlagCard/FlagCard';
 
 class GameContainer extends Component {
@@ -15,9 +15,10 @@ class GameContainer extends Component {
   }
 
   handleGuess = (e) => {
-    const { countries } = this.props
+    const { countries, removeCountryGuessed } = this.props
     this.addPoints(e)
     this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
+    removeCountryGuessed();
 
   }
 
@@ -48,7 +49,8 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  saveCountries: countries => dispatch(saveCountries(countries))
+  saveCountries: countries => dispatch(saveCountries(countries)),
+  removeCountryGuessed: () => dispatch(removeCountryGuessed())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameContainer);

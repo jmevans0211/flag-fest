@@ -3,7 +3,8 @@ export const countries = (state=[], action) => {
     case 'SAVE_COUNTRIES':
       return action.countries
     case 'REMOVE_COUNTRY_GUESSED':
-      return state.unshift()
+      state.splice(0, 1)
+      return state 
     default:
       return state
   }

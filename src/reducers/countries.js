@@ -4,7 +4,7 @@ export const countries = (state=[], action) => {
       return action.countries
     case 'REMOVE_COUNTRY_GUESSED':
       state.splice(0, 1)
-      return state 
+      return [...state] 
     default:
       return state
   }

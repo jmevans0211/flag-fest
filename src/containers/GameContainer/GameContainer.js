@@ -19,7 +19,7 @@ class GameContainer extends Component {
     this.addPoints(e)
     this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
     removeCountryGuessed();
-
+    this.forceUpdate()
   }
 
   addPoints = (e) => {

@@ -13,8 +13,10 @@ class GameContainer extends Component {
     }
   }
 
-  addPoints = (points) => {
-    this.state.points += points
+  addPoints = (e) => {
+    e.preventDefault()
+    console.log('FIRED!')
+    this.setState({ points: this.state.points += 1})
   }
   
   

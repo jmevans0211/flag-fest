@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import FlagCard from './../../components/FlagCard/FlagCard';
 
 class GameContainer extends Component {
   constructor() {
@@ -11,14 +12,20 @@ class GameContainer extends Component {
     }
   }
   
-  generageFlagCards = () => {
+  generageFlagCard = () => {
+    const {countries} = this.props
+    
+
+    //get index 0 information
+    //display on card
+    //button press
+    //calculate points
+    //get out of array
     
   }
   
   
   render() {
-    const {countries} = this.props
-    console.log('in render ==>>>', countries)
     return (
       <main>
         <h1>in game container</h1>

@@ -12,12 +12,14 @@ const FlagCard = ({ countries, addPoints }) => {
     flag = countries[0].flag
   }
 
+console.log(addPoints)
+
   return (
     <section className="flag-card-container">
       <h1>like hi</h1>
       <img src={flag} />
-      <button>{name}</button>
-      <button onClick={() => addPoints(1)}>Wrong Answer</button>
+      <button onClick={(e) => addPoints(e)}>{name}</button>
+      <button>Wrong Answer</button>
     </section>
   )
 }

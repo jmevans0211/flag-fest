@@ -9,23 +9,28 @@ class GameContainer extends Component {
     super();
     this.state = {
       points: 0,
+      flagsGuessed: [],
       roundComplete: false
     }
   }
 
+  handleGuess = (e) => {
+    this.addPoints(e)
+
+  }
+
   addPoints = (e) => {
     e.preventDefault()
-    console.log('FIRED!')
     this.setState({ points: this.state.points += 1})
   }
   
   
   render() {
-console.log('points in GC===>>>', this.state.points)
+    console.log(this.state.points)
     return (
       <main>
         <h1>container h1</h1>
-          <h4><FlagCard addPoints={this.addPoints}/></h4>
+          <h4><FlagCard handleGuess={this.handleGuess}/></h4>
         <Link to="/">
           <p>Start Over</p>
         </Link>

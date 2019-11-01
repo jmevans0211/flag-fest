@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import { fetchData } from './../../utils/apiCalls';
 import { cleanCountryData } from './../../utils/helpers';
+import { saveCountries } from '../../actions';
 import './ChooseRegion.scss'
 
 class ChooseRegion extends Component {
@@ -36,7 +39,7 @@ class ChooseRegion extends Component {
   }
 
   filterCountries = async () => {
-    // const { prop } = this.props
+    const { saveCountries } = this.props
 
     try {
       // isLoading(true)
@@ -44,31 +47,32 @@ class ChooseRegion extends Component {
       const cleanCountriesData = cleanCountryData(countries)
       const regionalData = cleanCountriesData.filter(country => {
         return country.region === this.state.region
-      })
-      console.log(regionalData)
+      }) 
+      const randomCountries = this.randomizeCountries(regionalData)
+      if (this.state.tenLimit === true) {
+        saveCountries(randomCountries.slice(0, 10))
+      } else {
+        saveCountries(randomCountries)
+      }
     } catch {
       // isLoading(false)
+      //handleError()
     }
-    
-
-
-    // async componentDidMount() {
-    //   const { getMovies, handleError, isLoading } = this.props
-  
-    //   try {
-    //     isLoading(true)
-    //     const movies = await fetchData('https://api.themoviedb.org/3/movie/now_playing?api_key=cd7eb6a4cff8273d777385057dcf9b56')
-    //     const cleanMovies = filteredMovieData(movies.results)
-    //     isLoading(false)
-    //     getMovies(cleanMovies)
-    //   } catch {
-    //     isLoading(false)
-    //     handleError('There was an error getting your movies!')
-    //   }
-    // }
 
 
   } //<---end of filterCountries
+
+  randomizeCountries = (countries) => {
+    var i = countries.length, k , temp;
+    while (--i > 0) {
+       k = Math.floor(Math.random() * (i + 1));
+       temp = countries[k];
+       countries[k] = countries[i];
+       countries[i] = temp;
+    }
+      return countries
+  }
+
 
   render() {
     console.log(this.state)
@@ -97,4 +101,12 @@ class ChooseRegion extends Component {
 
 }
 
-export default ChooseRegion;
+const mapDispatchToProps = dispatch => ({
+  saveCountries: countries => dispatch(saveCountries(countries))
+})
+
+export const mapStateToProps = state => ({
+  countries: state.countries,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChooseRegion);

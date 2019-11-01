@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 class GameContainer extends Component {
   constructor() {
     super();
     this.state = {
+      points: 0,
       roundComplete: false
     }
   }
-
+  
+  generageFlagCards = () => {
+    
+  }
+  
+  
   render() {
+    const {countries} = this.props
+    console.log('in render ==>>>', countries)
     return (
       <main>
         <h1>in game container</h1>
@@ -22,4 +31,10 @@ class GameContainer extends Component {
   }
 }
 
-export default GameContainer
+export const mapStateToProps = state => ({
+  countries: state.countries,
+});
+
+export default connect(mapStateToProps, null)(GameContainer);
+
+

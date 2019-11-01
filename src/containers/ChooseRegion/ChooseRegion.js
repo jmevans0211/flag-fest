@@ -49,10 +49,11 @@ class ChooseRegion extends Component {
         return country.region === this.state.region
       }) 
       const randomCountries = this.randomizeCountries(regionalData)
-      console.log('regionalData randomized-->', regionalData)
-      // const tenCountries = this.limitCountries(randomCountries)
-      // console.log('10 countries --->', tenCountries)
-      saveCountries(randomCountries)
+      if (this.state.tenLimit === true) {
+        saveCountries(randomCountries.slice(0, 10))
+      } else {
+        saveCountries(randomCountries)
+      }
     } catch {
       // isLoading(false)
       //handleError()
@@ -72,11 +73,6 @@ class ChooseRegion extends Component {
       return countries
   }
 
-  limitCountries = (countries) => {
-    if (this.state.tenLimit === true) {
-      countries.spice(10)
-    }
-  }
 
   render() {
     console.log(this.state)

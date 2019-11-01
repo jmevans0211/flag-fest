@@ -48,8 +48,11 @@ class ChooseRegion extends Component {
       const regionalData = cleanCountriesData.filter(country => {
         return country.region === this.state.region
       }) 
-      console.log('regionalData', regionalData)
-      saveCountries(regionalData)
+      const randomCountries = this.randomizeCountries(regionalData)
+      console.log('regionalData randomized-->', regionalData)
+      // const tenCountries = this.limitCountries(randomCountries)
+      // console.log('10 countries --->', tenCountries)
+      saveCountries(randomCountries)
     } catch {
       // isLoading(false)
       //handleError()
@@ -58,7 +61,25 @@ class ChooseRegion extends Component {
 
   } //<---end of filterCountries
 
+  randomizeCountries = (countries) => {
+    var i = countries.length, k , temp;
+    while (--i > 0) {
+       k = Math.floor(Math.random() * (i + 1));
+       temp = countries[k];
+       countries[k] = countries[i];
+       countries[i] = temp;
+    }
+      return countries
+  }
+
+  limitCountries = (countries) => {
+    if (this.state.tenLimit === true) {
+      countries.spice(10)
+    }
+  }
+
   render() {
+    console.log(this.state)
     return (
       <main>
         <h1>Choose a Region</h1>

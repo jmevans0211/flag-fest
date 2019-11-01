@@ -14,12 +14,17 @@ class GameContainer extends Component {
     }
   }
 
-  handleGuess = () => {
+  handleGuess = (answer) => {
     const { countries, removeCountryGuessed } = this.props
-    this.addPoints()
-    this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
-    removeCountryGuessed();
-    this.forceUpdate()
+    if(answer === 'correct') {
+      this.addPoints()
+      this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
+      removeCountryGuessed();
+    } else if (answer === 'incorrect') {
+      this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
+      removeCountryGuessed();
+    }
+    // this.forceUpdate()
   }
 
   addPoints = () => {

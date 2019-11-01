@@ -16,8 +16,8 @@ const FlagCard = ({ countries, handleGuess }) => {
     <section className="flag-card-container">
       <h1>like hi</h1>
       <img src={flag} />
-      <button onClick={(e) => handleGuess(e)}>{name}</button>
-      <button>Wrong Answer</button>
+      <button onClick={() => handleGuess('correct')}>{name}</button>
+      <button onClick={() => handleGuess('incorrect')}>Wrong Answer</button>
     </section>
   )
 }

@@ -14,16 +14,15 @@ class GameContainer extends Component {
     }
   }
 
-  handleGuess = (e) => {
+  handleGuess = () => {
     const { countries, removeCountryGuessed } = this.props
-    this.addPoints(e)
+    this.addPoints()
     this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
     removeCountryGuessed();
     this.forceUpdate()
   }
 
-  addPoints = (e) => {
-    e.preventDefault()
+  addPoints = () => {
     this.setState({ points: this.state.points += 1})
   }
   

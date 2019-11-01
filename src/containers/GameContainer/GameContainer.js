@@ -15,7 +15,9 @@ class GameContainer extends Component {
   }
 
   handleGuess = (e) => {
+    const { countries } = this.props
     this.addPoints(e)
+    this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
 
   }
 
@@ -26,7 +28,8 @@ class GameContainer extends Component {
   
   
   render() {
-    console.log(this.state.points)
+    console.log('points--->', this.state.points)
+    console.log('flags guessed--->', this.state.flagsGuessed)
     return (
       <main>
         <h1>container h1</h1>

@@ -24,7 +24,7 @@ class ChooseRegion extends Component {
     } else if (region === 'asia') {
       this.setState({ region: 'Asia' })
     } else if (region === 'americas') {
-      this.setState({ region: 'America' })
+      this.setState({ region: 'Americas' })
     } else if (region === 'oceania') {
       this.setState({ region: 'Oceania'})
     }
@@ -44,17 +44,20 @@ class ChooseRegion extends Component {
     try {
       // isLoading(true)
       const countries = await fetchData('https://restcountries.eu/rest/v2/all')
-      const cleanCountriesData = cleanCountryData(countries)
-      const regionalData = cleanCountriesData.filter(country => {
+      const cleanCountriesData = await cleanCountryData(countries)
+      const regionalData = await cleanCountriesData.filter(country => {
         return country.region === this.state.region
       }) 
-      const randomCountries = this.randomizeCountries(regionalData)
+      const randomCountries = await this.randomizeCountries(regionalData)
       if (this.state.tenLimit === true) {
         saveCountries(randomCountries.slice(0, 10))
+        this.resetState()
       } else {
         saveCountries(randomCountries)
+        this.resetState()
       }
     } catch {
+      console.log('error')
       // isLoading(false)
       //handleError()
     }
@@ -71,6 +74,10 @@ class ChooseRegion extends Component {
        countries[i] = temp;
     }
       return countries
+  }
+
+  resetState = () => {
+    this.setState({region: '', tenLimit: false})
   }
 
 
@@ -101,12 +108,12 @@ class ChooseRegion extends Component {
 
 }
 
-const mapDispatchToProps = dispatch => ({
-  saveCountries: countries => dispatch(saveCountries(countries))
-})
-
 export const mapStateToProps = state => ({
   countries: state.countries,
+});
+
+const mapDispatchToProps = dispatch => ({
+  saveCountries: countries => dispatch(saveCountries(countries))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChooseRegion);

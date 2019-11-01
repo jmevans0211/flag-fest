@@ -47,7 +47,7 @@ class ChooseRegion extends Component {
       const cleanCountriesData = cleanCountryData(countries)
       const regionalData = cleanCountriesData.filter(country => {
         return country.region === this.state.region
-      })
+      }) 
       console.log('regionalData', regionalData)
       saveCountries(regionalData)
     } catch {

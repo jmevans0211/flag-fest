@@ -13,33 +13,17 @@ class GameContainer extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   return this.generageFlagCard();
-  // }
-  
-  generageFlagCard = () => {
-    // const {countries} = this.props
-    // return <FlagCard
-    //   name = { countries[0].name }
-    //   flag = { countries[0].flag }
-    // />
-    
-    //get index 0 information
-    //display on card
-    //button press
-    //calculate points
-    //get out of array
-    
+  addPoints = (points) => {
+    this.state.points += points
   }
   
   
   render() {
-    const { countries } = this.props
-    console.log(countries[0], FlagCard)
+console.log('points in GC===>>>', this.state.points)
     return (
       <main>
         <h1>container h1</h1>
-          <h4><FlagCard /></h4>
+          <h4><FlagCard addPoints={this.addPoints}/></h4>
         <Link to="/">
           <p>Start Over</p>
         </Link>

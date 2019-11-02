@@ -112,7 +112,7 @@ export const mapStateToProps = state => ({
   countries: state.countries,
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   saveCountries: countries => dispatch(saveCountries(countries))
 });
 

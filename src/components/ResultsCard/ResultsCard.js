@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ResultsCard.scss'
 
-const ResultsCard = () => {
+const ResultsCard = ({ points, flagsGuessed }) => {
   return(
     <main>
-      <h4>Score:</h4>
+      <h4>Score: {points}/{flagsGuessed.length}</h4>
       <p>Correct Answers:</p>
     </main>
   )

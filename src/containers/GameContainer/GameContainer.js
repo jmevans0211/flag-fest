@@ -39,7 +39,7 @@ class GameContainer extends Component {
     return (
       <main>
           {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess}/>}
-          {countries.length === 0 && <ResultsCard />}
+          {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed}/>}
         <Link to="/">
           <p>Start Over</p>
         </Link>

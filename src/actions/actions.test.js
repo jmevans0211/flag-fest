@@ -27,6 +27,17 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction)
   });
 
+  it('should have a type of REMOVE_COUNTRY_GUESSED', () => {
+    const expectedAction = {
+      type: 'REMOVE_COUNTRY_GUESSED',
+    }
+
+    const result = actions.removeCountryGuessed()
+
+    expect(result).toEqual(expectedAction)
+
+  });
+
 
 
 });

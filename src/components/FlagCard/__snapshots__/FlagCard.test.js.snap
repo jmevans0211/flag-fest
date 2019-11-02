@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlagCard should match snapshot 1`] = `
+<section
+  className="flag-card-container"
+>
+  <img
+    src="https://restcountries.eu/data/srb.svg"
+  />
+  <button
+    onClick={[Function]}
+  >
+    Serbia
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Genovia
+  </button>
+</section>
+`;

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsCard should match snapshot 1`] = `
+<main>
+  <h4>
+    Score: 
+    1
+    /
+    2
+  </h4>
+  <section
+    className="correct-answer-display"
+  >
+    Correct Answers: 
+    <div>
+      <p>
+        Serbia
+      </p>
+      <img
+        src="https://restcountries.eu/data/srb.svg"
+      />
+    </div>
+    <div>
+      <p>
+        Luxembourg
+      </p>
+      <img
+        src="https://restcountries.eu/data/lux.svg"
+      />
+    </div>
+  </section>
+  <Link
+    to="/"
+  >
+    <p>
+      Play Again!
+    </p>
+  </Link>
+</main>
+`;

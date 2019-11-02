@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChooseRegion should match snapshot 1`] = `
+<main>
+  <h1>
+    Choose a Region
+  </h1>
+  <img
+    className="region"
+    onClick={[Function]}
+    src="https://svgsilh.com/svg/151640.svg"
+  />
+  <img
+    className="region"
+    onClick={[Function]}
+    src="https://svgsilh.com/svg/151641.svg"
+  />
+  <img
+    className="region"
+    onClick={[Function]}
+    src="https://svgsilh.com/svg/307197.svg"
+  />
+  <img
+    className="region"
+    onClick={[Function]}
+    src="https://svgsilh.com/svg_v2/714733.svg"
+  />
+  <img
+    className="region"
+    onClick={[Function]}
+    src="https://svgsilh.com/svg/23512.svg"
+  />
+  <div
+    className="flag-amount-container"
+  >
+    <h4>
+      Choose How Many Flags You'd Like To Be Tested On
+    </h4>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      All Flags for this Region
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Test me on 10 flags for this region
+    </button>
+  </div>
+  <Link
+    to="/flag-fest/play"
+  >
+    <h4
+      className="play-button"
+      onClick={[Function]}
+    >
+      Play!
+    </h4>
+  </Link>
+  <Link
+    to=""
+  >
+    <h4
+      className="back-button"
+    >
+      Back
+    </h4>
+  </Link>
+</main>
+`;

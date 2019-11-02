@@ -5,7 +5,7 @@ import { saveCountries, removeCountryGuessed } from './../../actions';
 import FlagCard from './../../components/FlagCard/FlagCard';
 import ResultsCard from './../../components/ResultsCard/ResultsCard';
 
-class GameContainer extends Component {
+export class GameContainer extends Component {
   constructor() {
     super();
     this.state = {

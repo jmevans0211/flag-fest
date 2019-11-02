@@ -7,7 +7,7 @@ import { cleanCountryData } from './../../utils/helpers';
 import { saveCountries } from '../../actions';
 import './ChooseRegion.scss'
 
-class ChooseRegion extends Component {
+export class ChooseRegion extends Component {
   constructor() {
     super();
     this.state = {
@@ -112,7 +112,7 @@ export const mapStateToProps = state => ({
   countries: state.countries,
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   saveCountries: countries => dispatch(saveCountries(countries))
 });
 

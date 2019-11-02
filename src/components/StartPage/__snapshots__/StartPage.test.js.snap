@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartPage should match snapshot 1`] = `
+<div
+  className="start-container"
+>
+  <div
+    className="start-content"
+  >
+    <h1>
+      Flag Fest
+    </h1>
+    <Link
+      to="/flag-fest"
+    >
+      <h3
+        className="start-button"
+        role="button"
+      >
+        START GAME
+      </h3>
+    </Link>
+  </div>
+</div>
+`;

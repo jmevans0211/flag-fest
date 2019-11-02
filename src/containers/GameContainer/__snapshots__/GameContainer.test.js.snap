@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameContainer should match snapshot 1`] = `
+<main>
+  <Connect(FlagCard)
+    handleGuess={[Function]}
+  />
+  <Link
+    to="/"
+  >
+    <p>
+      Start Over
+    </p>
+  </Link>
+</main>
+`;

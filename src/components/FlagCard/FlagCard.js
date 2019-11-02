@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import './FlagCard.scss'
 
 
-const FlagCard = ({ countries, handleGuess }) => {
+export const FlagCard = ({ countries, handleGuess }) => {
   let name;
   let flag;
   
@@ -25,7 +25,6 @@ const FlagCard = ({ countries, handleGuess }) => {
 
   return (
     <section className="flag-card-container">
-      <h1>like hi</h1>
       <img src={flag} />
       <button onClick={() => handleGuess('correct')}>{name}</button>
       <button onClick={() => handleGuess('incorrect')}>{wrongAnswer}</button>

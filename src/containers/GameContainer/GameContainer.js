@@ -14,26 +14,29 @@ class GameContainer extends Component {
     }
   }
 
-  handleGuess = () => {
+
+  handleGuess = (answer) => {
     const { countries, removeCountryGuessed } = this.props
-    this.addPoints()
-    this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
-    removeCountryGuessed();
-    this.forceUpdate()
+    if(answer === 'correct') {
+      this.addPoints()
+      this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
+      removeCountryGuessed();
+    } else if (answer === 'incorrect') {
+      this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
+      removeCountryGuessed();
+    }
   }
 
   addPoints = () => {
     this.setState({ points: this.state.points += 1})
   }
   
-  
   render() {
     console.log('points--->', this.state.points)
     console.log('flags guessed--->', this.state.flagsGuessed)
     return (
       <main>
-        <h1>container h1</h1>
-          <h4><FlagCard handleGuess={this.handleGuess}/></h4>
+          <FlagCard handleGuess={this.handleGuess}/>
         <Link to="/">
           <p>Start Over</p>
         </Link>

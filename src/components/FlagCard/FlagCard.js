@@ -12,12 +12,23 @@ const FlagCard = ({ countries, handleGuess }) => {
     flag = countries[0].flag
   }
 
+  const wrongAnswers = countries.map(country => {
+    return country.name
+  })
+
+  let wrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
+
+  if (wrongAnswer === name) {
+    wrongAnswer = 'Genovia'
+  }
+
+
   return (
     <section className="flag-card-container">
       <h1>like hi</h1>
       <img src={flag} />
       <button onClick={() => handleGuess('correct')}>{name}</button>
-      <button onClick={() => handleGuess('incorrect')}>Wrong Answer</button>
+      <button onClick={() => handleGuess('incorrect')}>{wrongAnswer}</button>
     </section>
   )
 }

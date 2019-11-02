@@ -38,12 +38,13 @@ class GameContainer extends Component {
     console.log('flags guessed--->', this.state.flagsGuessed)
     return (
       <main>
-          {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess}/>}
-          {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed}/>}
-        <Link to="/">
-          <p>Start Over</p>
-        </Link>
-
+        {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess}/>}
+        {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed}/>}
+        {countries.length !== 0 && 
+          <Link to="/">
+            <p>Start Over</p>
+          </Link>
+        }
       </main>
     )
   }

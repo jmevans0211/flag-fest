@@ -16,15 +16,15 @@ const FlagCard = ({ countries, handleGuess }) => {
     return country.name
   })
 
-  let wrongAnswer;
-  
+  let wrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
+
 
   return (
     <section className="flag-card-container">
       <h1>like hi</h1>
       <img src={flag} />
       <button onClick={() => handleGuess('correct')}>{name}</button>
-      <button onClick={() => handleGuess('incorrect')}>wrongAnswer</button>
+      <button onClick={() => handleGuess('incorrect')}>{wrongAnswer}</button>
     </section>
   )
 }

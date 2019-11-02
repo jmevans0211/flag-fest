@@ -9,7 +9,6 @@ class GameContainer extends Component {
     super();
     this.state = {
       points: 0,
-      wrongAnswers: [],
       flagsGuessed: [],
       roundComplete: false
     }
@@ -31,10 +30,6 @@ class GameContainer extends Component {
   addPoints = () => {
     this.setState({ points: this.state.points += 1})
   }
-
-  handleWrongAnswers = () => {
-    
-  }  
   
   render() {
     console.log('points--->', this.state.points)

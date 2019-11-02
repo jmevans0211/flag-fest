@@ -7,7 +7,7 @@ import { cleanCountryData } from './../../utils/helpers';
 import { saveCountries } from '../../actions';
 import './ChooseRegion.scss'
 
-class ChooseRegion extends Component {
+export class ChooseRegion extends Component {
   constructor() {
     super();
     this.state = {

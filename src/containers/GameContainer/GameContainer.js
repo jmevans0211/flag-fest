@@ -38,7 +38,7 @@ class GameContainer extends Component {
     console.log('flags guessed--->', this.state.flagsGuessed)
     return (
       <main>
-          <FlagCard handleGuess={this.handleGuess}/>
+          {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess}/>}
           {countries.length === 0 && <ResultsCard />}
         <Link to="/">
           <p>Start Over</p>

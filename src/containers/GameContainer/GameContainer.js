@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { saveCountries, removeCountryGuessed } from './../../actions';
 import FlagCard from './../../components/FlagCard/FlagCard';
+import ResultsCard from './../../components/ResultsCard/ResultsCard';
 
 class GameContainer extends Component {
   constructor() {
@@ -32,11 +33,13 @@ class GameContainer extends Component {
   }
   
   render() {
+   const { countries } = this.props
     console.log('points--->', this.state.points)
     console.log('flags guessed--->', this.state.flagsGuessed)
     return (
       <main>
           <FlagCard handleGuess={this.handleGuess}/>
+          {countries.length === 0 && <ResultsCard />}
         <Link to="/">
           <p>Start Over</p>
         </Link>

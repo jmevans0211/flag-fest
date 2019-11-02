@@ -36,8 +36,7 @@ class GameContainer extends Component {
     console.log('flags guessed--->', this.state.flagsGuessed)
     return (
       <main>
-        <h1>container h1</h1>
-          <h4><FlagCard handleGuess={this.handleGuess}/></h4>
+          <FlagCard handleGuess={this.handleGuess}/>
         <Link to="/">
           <p>Start Over</p>
         </Link>

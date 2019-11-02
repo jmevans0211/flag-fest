@@ -18,6 +18,10 @@ const FlagCard = ({ countries, handleGuess }) => {
 
   let wrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
 
+  if (wrongAnswer === name) {
+    wrongAnswer = 'Genovia'
+  }
+
 
   return (
     <section className="flag-card-container">

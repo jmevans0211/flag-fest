@@ -9,10 +9,12 @@ class GameContainer extends Component {
     super();
     this.state = {
       points: 0,
+      wrongAnswers: [],
       flagsGuessed: [],
       roundComplete: false
     }
   }
+
 
   handleGuess = (answer) => {
     const { countries, removeCountryGuessed } = this.props
@@ -24,13 +26,15 @@ class GameContainer extends Component {
       this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
       removeCountryGuessed();
     }
-    // this.forceUpdate()
   }
 
   addPoints = () => {
     this.setState({ points: this.state.points += 1})
   }
-  
+
+  handleWrongAnswers = () => {
+    
+  }  
   
   render() {
     console.log('points--->', this.state.points)

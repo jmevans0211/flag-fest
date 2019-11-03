@@ -26,7 +26,6 @@ describe('countries', () => {
     ]
 
     const initialState = null;
-    const state = initialState;
     const action = {
       type: "SAVE_COUNTRIES",
       countries: mockCountries
@@ -34,9 +33,47 @@ describe('countries', () => {
 
     const newState = mockCountries;
 
-    const result = countries(state, action);
+    const result = countries(initialState, action);
 
     expect(result).toEqual(newState);
+  });
+
+  it('should remove countries from state', () => {
+    const mockCountries = [
+      {
+        flag: "https://restcountries.eu/data/srb.svg",
+        name: "Serbia",
+        numericCode: 688,
+        region: "Europe"
+      },
+      {
+        flag: "https://restcountries.eu/data/lux.svg",
+        name: "Luxembourg",
+        numericCode: 442,
+        region: "Europe"
+      }
+    ]
+
+    const initialState = mockCountries
+    const action = {
+      type: "REMOVE_COUNTRY_GUESSED",
+      countries: mockCountries
+    }
+
+    const newState = [
+      {
+        flag: "https://restcountries.eu/data/lux.svg",
+        name: "Luxembourg",
+        numericCode: 442,
+        region: "Europe"
+      }
+    ]
+
+    const result = countries(initialState, action);
+
+    expect(result).toEqual(newState);
+
+
   });
 
 

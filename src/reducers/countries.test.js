@@ -72,11 +72,5 @@ describe('countries', () => {
     const result = countries(initialState, action);
 
     expect(result).toEqual(newState);
-
-
   });
-
-
-
-
 });

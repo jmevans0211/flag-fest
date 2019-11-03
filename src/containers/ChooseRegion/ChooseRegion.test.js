@@ -27,6 +27,13 @@ describe ('ChooseRegion', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it.skip('should call handleRegion when region is clicked', () => {
+    const mockHandleRegion = jest.fn();
 
+    wrapper.find('img').at(0).simulate('click');
+
+    expect(mockHandleRegion).toHaveBeenCalledWith('Africa')
+
+  });
 
 });

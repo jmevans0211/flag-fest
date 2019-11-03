@@ -35,9 +35,7 @@ describe('actions', () => {
     const result = actions.removeCountryGuessed()
 
     expect(result).toEqual(expectedAction)
-
   });
-
 
 
 });

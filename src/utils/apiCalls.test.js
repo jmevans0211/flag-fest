@@ -1,19 +1,13 @@
 import { fetchData } from './apiCalls';
+import { mockData } from './mockData';
 
 describe('fetchData', () => {
-
-  const mockResponse = [
-    {
-      name: 'Colombia',
-      
-    }
-  ]
 
   beforeEach(() => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok: true,
-        json: () => Promise.resolve(mockResponse)
+        json: () => Promise.resolve(mockData)
       });
     });
   });

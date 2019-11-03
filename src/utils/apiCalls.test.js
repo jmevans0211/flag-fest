@@ -38,5 +38,5 @@ describe('fetchData', () => {
 
     expect(fetchData(mockUrl)).rejects.toEqual(Error("Invalid API key: You must be granted a valid key."));
   });
-
+ 
 });

@@ -58,8 +58,6 @@ export class ChooseRegion extends Component {
     } catch(error) {
       console.log('error', error.message)
     }
-
-
   } //<---end of filterCountries
 
   randomizeCountries = (countries) => {

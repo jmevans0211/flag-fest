@@ -34,8 +34,7 @@ export class GameContainer extends Component {
   
   render() {
    const { countries } = this.props
-    console.log('points--->', this.state.points)
-    console.log('flags guessed--->', this.state.flagsGuessed)
+
     return (
       <main>
         {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess} flagsGuessed={this.state.flagsGuessed} />}

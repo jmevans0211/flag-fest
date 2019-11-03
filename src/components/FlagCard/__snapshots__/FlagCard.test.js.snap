@@ -15,7 +15,7 @@ exports[`FlagCard should match snapshot 1`] = `
   <button
     onClick={[Function]}
   >
-    Genovia
+    Luxembourg
   </button>
 </section>
 `;

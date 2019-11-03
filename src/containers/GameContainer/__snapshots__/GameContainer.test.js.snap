@@ -3,6 +3,7 @@
 exports[`GameContainer should match snapshot 1`] = `
 <main>
   <Connect(FlagCard)
+    flagsGuessed={Array []}
     handleGuess={[Function]}
   />
   <Link

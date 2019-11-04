@@ -5,6 +5,7 @@ import { ChooseRegion, mapStateToProps, mapDispatchToProps } from './ChooseRegio
 
 describe ('ChooseRegion', () => {
   let wrapper;
+  let mockCountries;
   beforeEach(() => {
     wrapper = shallow(<ChooseRegion countries={
       [
@@ -21,7 +22,24 @@ describe ('ChooseRegion', () => {
           region: "Europe"
         }
       ]
-    }/>)
+    }
+    mockCountries = {
+      [
+        {
+          flag: "https://restcountries.eu/data/srb.svg",
+          name: "Serbia",
+          numericCode: 688,
+          region: "Europe"
+        },
+        {
+          flag: "https://restcountries.eu/data/lux.svg",
+          name: "Luxembourg",
+          numericCode: 442,
+          region: "Europe"
+        }
+      ]
+    }
+    />)
   });
 
   it('should match snapshot', () => {
@@ -72,6 +90,36 @@ describe ('ChooseRegion', () => {
 
     expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'oceania')
   });
+
+  it('should have default states', () => {
+    expect(wrapper.state('region')).toEqual('');
+    expect(wrapper.state('activeRegion')).toEqual('');
+    expect(wrapper.state('tenLimit')).toEqual(false);
+    expect(wrapper.state('activeAmount')).toEqual('');
+  });
+
+  it('should update state with a new region when handleRegion is called', () => {
+    const mockEvent = { stopPropagation: jest.fn() }
+    const expected = 'Europe'
+
+    expect(wrapper.state('region')).toEqual('');
+
+    wrapper.instance().handleRegion(mockEvent, 'europe');
+
+    expect(wrapper.state('region')).toEqual(expected);
+  });
+
+  it('should update state with an activeRegion when handleRegion is called', () => {
+    const mockEvent = { stopPropagation: jest.fn() }
+    const expected = 'americas'
+
+    expect(wrapper.state('activeRegion')).toEqual('');
+
+    wrapper.instance().handleRegion(mockEvent, 'americas');
+
+    expect(wrapper.state('activeRegion')).toEqual(expected);
+  });
+
 });
 
 describe('mapStateToProps', () => {

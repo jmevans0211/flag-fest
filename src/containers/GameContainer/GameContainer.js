@@ -25,14 +25,11 @@ export class GameContainer extends Component {
     let randomNumber = positions[Math.floor(Math.random() * positions.length)]
 
     if (randomNumber === 1) {
-      this.setState({correctClass: 'positionA'})
-      this.setState({wrongClass: 'positionB'})
+      this.setState({correctClass: 'positionA', wrongClass: 'positionB'})
     } else {
-      this.setState({correctClass: 'positionB'})
-      this.setState({wrongClass: 'positionA'})
+      this.setState({correctClass: 'positionB', wrongClass: 'positionA'})
     }
   }
-
 
   handleGuess = (answer) => {
     const { countries, removeCountryGuessed } = this.props

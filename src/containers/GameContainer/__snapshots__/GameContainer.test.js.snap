@@ -3,11 +3,11 @@
 exports[`GameContainer should match snapshot 1`] = `
 <main>
   <Connect(FlagCard)
-    correctClass="positionA"
+    correctClass="positionB"
     flagsGuessed={Array []}
     handleButtonClass={[Function]}
     handleGuess={[Function]}
-    wrongClass="positionB"
+    wrongClass="positionA"
   />
   <Link
     className="router-link"

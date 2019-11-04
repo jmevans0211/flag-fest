@@ -18,6 +18,7 @@ exports[`ResultsCard should match snapshot 1`] = `
     Correct Answers: 
     <div
       className="correct-answer"
+      key="688"
     >
       <img
         src="https://restcountries.eu/data/srb.svg"
@@ -28,6 +29,7 @@ exports[`ResultsCard should match snapshot 1`] = `
     </div>
     <div
       className="correct-answer"
+      key="442"
     >
       <img
         src="https://restcountries.eu/data/lux.svg"

@@ -27,13 +27,21 @@ describe ('ChooseRegion', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should call handleRegion when region is clicked', () => {
+  it('should call handleRegion when region is clicked', () => {
+    wrapper.instance().handleRegion = jest.fn()
     const mockEvent = { stopPropagation: jest.fn() }
 
-    wrapper.find('img').at(0).simulate('click');
+    wrapper.find('img').at(0).simulate('click', mockEvent);
 
-    expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'Africa')
-
+    expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'africa')
   });
 
+  it('should call handleRegion when region is clicked', () => {
+    wrapper.instance().handleRegion = jest.fn()
+    const mockEvent = { stopPropagation: jest.fn() }
+
+    wrapper.find('img').at(1).simulate('click', mockEvent);
+
+    expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'europe')
+  });
 });

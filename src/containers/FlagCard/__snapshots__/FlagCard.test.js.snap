@@ -12,12 +12,43 @@ exports[`FlagCard should match snapshot 1`] = `
     className="answer-container"
   >
     <h6
+      className="positionA"
       onClick={[Function]}
       role="button"
     >
       Serbia
     </h6>
     <h6
+      className="positionB"
+      onClick={[Function]}
+      role="button"
+    >
+      Luxembourg
+    </h6>
+  </div>
+</section>
+`;
+
+exports[`FlagCard should match snapshot when answer buttons get different classNames 1`] = `
+<section
+  className="flag-card-container"
+>
+  <img
+    className="card-flag"
+    src="https://restcountries.eu/data/srb.svg"
+  />
+  <div
+    className="answer-container"
+  >
+    <h6
+      className="positionB"
+      onClick={[Function]}
+      role="button"
+    >
+      Serbia
+    </h6>
+    <h6
+      className="positionA"
       onClick={[Function]}
       role="button"
     >

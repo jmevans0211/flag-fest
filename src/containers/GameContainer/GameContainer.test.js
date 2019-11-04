@@ -9,16 +9,16 @@ describe ('GameContainer', () => {
     wrapper = shallow(<GameContainer countries={
       [
         {
-          flag: "https://restcountries.eu/data/srb.svg",
-          name: "Serbia",
+          flag: 'https://restcountries.eu/data/srb.svg',
+          name: 'Serbia',
           numericCode: 688,
-          region: "Europe"
+          region: 'Europe'
         },
         {
-          flag: "https://restcountries.eu/data/lux.svg",
-          name: "Luxembourg",
+          flag: 'https://restcountries.eu/data/lux.svg',
+          name: 'Luxembourg',
           numericCode: 442,
-          region: "Europe"
+          region: 'Europe'
         }
       ]
     }
@@ -36,16 +36,16 @@ describe ('GameContainer', () => {
       <GameContainer countries={
         [
           {
-            flag: "https://restcountries.eu/data/srb.svg",
-            name: "Serbia",
+            flag: 'https://restcountries.eu/data/srb.svg',
+            name: 'Serbia',
             numericCode: 688,
-            region: "Europe"
+            region: 'Europe'
           },
           {
-            flag: "https://restcountries.eu/data/lux.svg",
-            name: "Luxembourg",
+            flag: 'https://restcountries.eu/data/lux.svg',
+            name: 'Luxembourg',
             numericCode: 442,
-            region: "Europe"
+            region: 'Europe'
           }
         ]
       }
@@ -74,16 +74,16 @@ describe('mapStateToProps', () => {
     const mockState = {
       countries: [
         {
-          flag: "https://restcountries.eu/data/srb.svg",
-          name: "Serbia",
+          flag: 'https://restcountries.eu/data/srb.svg',
+          name: 'Serbia',
           numericCode: 688,
-          region: "Europe"
+          region: 'Europe'
         },
         {
-          flag: "https://restcountries.eu/data/lux.svg",
-          name: "Luxembourg",
+          flag: 'https://restcountries.eu/data/lux.svg',
+          name: 'Luxembourg',
           numericCode: 442,
-          region: "Europe"
+          region: 'Europe'
         }
       ],
       filter: 'SAVE_COUNTRIES'
@@ -104,16 +104,16 @@ describe('mapStateToProps', () => {
     beforeEach(() => {
       mockCountries = [
         {
-          flag: "https://restcountries.eu/data/srb.svg",
-          name: "Serbia",
+          flag: 'https://restcountries.eu/data/srb.svg',
+          name: 'Serbia',
           numericCode: 688,
-          region: "Europe"
+          region: 'Europe'
         },
         {
-          flag: "https://restcountries.eu/data/lux.svg",
-          name: "Luxembourg",
+          flag: 'https://restcountries.eu/data/lux.svg',
+          name: 'Luxembourg',
           numericCode: 442,
-          region: "Europe"
+          region: 'Europe'
         }
       ]
       mockDispatch = jest.fn();

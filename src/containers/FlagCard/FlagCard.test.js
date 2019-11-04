@@ -11,16 +11,16 @@ describe ('FlagCard', () => {
       countries={
         [
           {
-            flag: "https://restcountries.eu/data/srb.svg",
-            name: "Serbia",
+            flag: 'https://restcountries.eu/data/srb.svg',
+            name: 'Serbia',
             numericCode: 688,
-            region: "Europe"
+            region: 'Europe'
           },
           {
-            flag: "https://restcountries.eu/data/lux.svg",
-            name: "Luxembourg",
+            flag: 'https://restcountries.eu/data/lux.svg',
+            name: 'Luxembourg',
             numericCode: 442,
-            region: "Europe"
+            region: 'Europe'
           }
         ]
       }
@@ -28,15 +28,15 @@ describe ('FlagCard', () => {
       flagsGuessed={
         [
           {
-            flag: "https://restcountries.eu/data/lux.svg",
-            name: "Luxembourg",
+            flag: 'https://restcountries.eu/data/lux.svg',
+            name: 'Luxembourg',
             numericCode: 442,
-            region: "Europe"
+            region: 'Europe'
           }
         ]
       }
-      correctClass="positionA"
-      wrongClass="positionB"
+      correctClass='positionA'
+      wrongClass='positionB'
     />)
   });
 
@@ -50,16 +50,16 @@ describe ('FlagCard', () => {
       countries={
         [
           {
-            flag: "https://restcountries.eu/data/srb.svg",
-            name: "Serbia",
+            flag: 'https://restcountries.eu/data/srb.svg',
+            name: 'Serbia',
             numericCode: 688,
-            region: "Europe"
+            region: 'Europe'
           },
           {
-            flag: "https://restcountries.eu/data/lux.svg",
-            name: "Luxembourg",
+            flag: 'https://restcountries.eu/data/lux.svg',
+            name: 'Luxembourg',
             numericCode: 442,
-            region: "Europe"
+            region: 'Europe'
           }
         ]
       }
@@ -67,15 +67,15 @@ describe ('FlagCard', () => {
       flagsGuessed={
         [
           {
-            flag: "https://restcountries.eu/data/lux.svg",
-            name: "Luxembourg",
+            flag: 'https://restcountries.eu/data/lux.svg',
+            name: 'Luxembourg',
             numericCode: 442,
-            region: "Europe"
+            region: 'Europe'
           }
         ]
       }
-      correctClass="positionB"
-      wrongClass="positionA"
+      correctClass='positionB'
+      wrongClass='positionA'
       />
     )
     expect(wrapper).toMatchSnapshot();
@@ -95,16 +95,16 @@ describe('mapStateToProps', () => {
     const mockState = {
       countries: [
         {
-          flag: "https://restcountries.eu/data/srb.svg",
-          name: "Serbia",
+          flag: 'https://restcountries.eu/data/srb.svg',
+          name: 'Serbia',
           numericCode: 688,
-          region: "Europe"
+          region: 'Europe'
         },
         {
-          flag: "https://restcountries.eu/data/lux.svg",
-          name: "Luxembourg",
+          flag: 'https://restcountries.eu/data/lux.svg',
+          name: 'Luxembourg',
           numericCode: 442,
-          region: "Europe"
+          region: 'Europe'
         }
       ],
       filter: 'SAVE_COUNTRIES'

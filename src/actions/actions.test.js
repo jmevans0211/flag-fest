@@ -7,19 +7,19 @@ describe('actions', () => {
         flag: 'https://restcountries.eu/data/srb.svg',
         name: 'Serbia',
         numericCode: 688,
-        region: "Europe"
+        region: 'Europe',
       },
       {
         flag: 'https://restcountries.eu/data/lux.svg',
         name: 'Luxembourg',
         numericCode: 442,
-        region: 'Europe'
-      }
-    ]
+        region: 'Europe',
+      },
+    ];
     
     const expectedAction = {
       type: 'SAVE_COUNTRIES',
-      countries: countries
+      countries: countries,
     }
 
     const result = actions.saveCountries(countries);

@@ -20,7 +20,6 @@ describe('helpers', () => {
     ]
 
     const result = cleanCountryData(mockCountries)
-    
     expect(result).toEqual(expected)
   });
 });

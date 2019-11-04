@@ -80,6 +80,14 @@ describe ('FlagCard', () => {
     )
     expect(wrapper).toMatchSnapshot();
   });
+
+  it.skip('should call handleGuess when answer is clicked', () => {
+    wrapper.handleGuess = jest.fn();
+
+    wrapper.find('h6').at(0).simulate('click');
+
+    expect(wrapper.handleGuess).toHaveBeenCalledWith('correct');
+  });
 });
 
 describe('mapStateToProps', () => {

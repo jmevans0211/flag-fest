@@ -45,6 +45,33 @@ describe ('ChooseRegion', () => {
 
     expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'europe')
   });
+
+  it('should call handleRegion when region is clicked', () => {
+    wrapper.instance().handleRegion = jest.fn()
+    const mockEvent = { stopPropagation: jest.fn() }
+
+    wrapper.find('img').at(2).simulate('click', mockEvent);
+
+    expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'asia')
+  });
+
+  it('should call handleRegion when region is clicked', () => {
+    wrapper.instance().handleRegion = jest.fn()
+    const mockEvent = { stopPropagation: jest.fn() }
+
+    wrapper.find('img').at(3).simulate('click', mockEvent);
+
+    expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'americas')
+  });
+
+  it('should call handleRegion when region is clicked', () => {
+    wrapper.instance().handleRegion = jest.fn()
+    const mockEvent = { stopPropagation: jest.fn() }
+
+    wrapper.find('img').at(4).simulate('click', mockEvent);
+
+    expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'oceania')
+  });
 });
 
 describe('mapStateToProps', () => {

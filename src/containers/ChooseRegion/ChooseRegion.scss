@@ -59,3 +59,12 @@ $gray: #E0E0E0;
   padding: 25px 0;
   width: 30%;
 }
+
+.selected-region {
+  border: 5px solid $button-selection-color;
+  padding: 2px;
+}
+
+.active-amount {
+  border: 5px solid black;
+}

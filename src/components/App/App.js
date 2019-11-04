@@ -14,10 +14,7 @@ class App extends Component {
         <Route exact path='/flag-fest/play' render={ () => <GameContainer />} />
       </main>
     )
-
   }
-
 }
-
 
 export default App;

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './ResultsCard.scss'
 
 const ResultsCard = ({ points, flagsGuessed }) => {
   const answers = flagsGuessed.map(flag => {
     return (
       <div key={flag.numericCode} className="correct-answer">
-        <img src={flag.flag} />
+        <img src={flag.flag} alt={flag.name} />
         <p>{flag.name}</p>
       </div>
       ) 
@@ -23,3 +24,8 @@ const ResultsCard = ({ points, flagsGuessed }) => {
 }
 
 export default ResultsCard;
+
+ResultsCard.propTypes = {
+  points: PropTypes.number.isRequired,
+  flagsGuessed: PropTypes.array.isRequired,
+}

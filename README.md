@@ -1,6 +1,8 @@
 # Flag Fest
 
-## About Flag Fest
+**Contributor:** [Jeannie Evans](https://github.com/jmevans0211/)
+
+#### About Flag Fest
 
 Flag Fest is a fun and interactive learning game where the user will learn country flags from a selected region of their choice.
 
@@ -19,5 +21,28 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 
 **Have fun!**
 
+### A Sneak Peak
+
+<details>
+  <summary> Start Page </summary>
+
+![Start Page](https://user-images.githubusercontent.com/48900496/68165666-3fbd0f00-ff1d-11e9-914f-f7eb27283c0c.png)
+
+</details>
 
 
+<details>
+
+<summary>Selecting a Region</summary>
+
+![Selecting a Region](https://user-images.githubusercontent.com/48900496/68165704-55323900-ff1d-11e9-830b-631dc4a90ca9.png)
+
+</details>
+
+
+<details>
+  <summary>Game Page</summary>
+
+![Game Page](https://user-images.githubusercontent.com/48900496/68165785-9f1b1f00-ff1d-11e9-987e-f112b78d3c7f.png)
+
+</details>

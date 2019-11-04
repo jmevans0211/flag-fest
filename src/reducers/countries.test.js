@@ -6,30 +6,30 @@ describe('countries', () => {
 
     const result = countries(undefined, {});
 
-    expect(result).toEqual(expected)
+    expect(result).toEqual(expected);
   });
 
   it('should return state with countries', () => {
     const mockCountries = [
-        {
-          flag: "https://restcountries.eu/data/srb.svg",
-          name: "Serbia",
-          numericCode: 688,
-          region: "Europe"
-        },
-        {
-          flag: "https://restcountries.eu/data/lux.svg",
-          name: "Luxembourg",
-          numericCode: 442,
-          region: "Europe"
-        }
-    ]
+      {
+        flag: 'https://restcountries.eu/data/srb.svg',
+        name: 'Serbia',
+        numericCode: 688,
+        region: 'Europe',
+      },
+      {
+        flag: 'https://restcountries.eu/data/lux.svg',
+        name: 'Luxembourg',
+        numericCode: 442,
+        region: 'Europe',
+      },
+    ];
 
     const initialState = null;
     const action = {
-      type: "SAVE_COUNTRIES",
-      countries: mockCountries
-    }
+      type: 'SAVE_COUNTRIES',
+      countries: mockCountries,
+    };
 
     const newState = mockCountries;
 
@@ -41,33 +41,33 @@ describe('countries', () => {
   it('should remove countries from state', () => {
     const mockCountries = [
       {
-        flag: "https://restcountries.eu/data/srb.svg",
-        name: "Serbia",
+        flag: 'https://restcountries.eu/data/srb.svg',
+        name: 'Serbia',
         numericCode: 688,
-        region: "Europe"
+        region: 'Europe',
       },
       {
-        flag: "https://restcountries.eu/data/lux.svg",
-        name: "Luxembourg",
+        flag: 'https://restcountries.eu/data/lux.svg',
+        name: 'Luxembourg',
         numericCode: 442,
-        region: "Europe"
-      }
-    ]
+        region: 'Europe',
+      },
+    ];
 
-    const initialState = mockCountries
+    const initialState = mockCountries;
     const action = {
-      type: "REMOVE_COUNTRY_GUESSED",
-      countries: mockCountries
-    }
+      type: 'REMOVE_COUNTRY_GUESSED',
+      countries: mockCountries,
+    };
 
     const newState = [
       {
-        flag: "https://restcountries.eu/data/lux.svg",
-        name: "Luxembourg",
+        flag: 'https://restcountries.eu/data/lux.svg',
+        name: 'Luxembourg',
         numericCode: 442,
-        region: "Europe"
-      }
-    ]
+        region: 'Europe'
+      },
+    ];
 
     const result = countries(initialState, action);
 

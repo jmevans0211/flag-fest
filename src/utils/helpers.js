@@ -3,6 +3,6 @@ export const cleanCountryData = countries => {
     name: country.name,
     region: country.region,
     flag: country.flag,
-    numericCode: parseInt(country.numericCode)
-  }))
-}
+    numericCode: parseInt(country.numericCode),
+  }));
+};

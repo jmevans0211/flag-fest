@@ -6,20 +6,20 @@ describe('helpers', () => {
     const mockCountries = mockData;
     const expected = [
       {
-        name: "Afghanistan",
-        region: "Asia",
-        numericCode: parseInt("004"),
-        flag: "https://restcountries.eu/data/afg.svg",
+        name: 'Afghanistan',
+        region: 'Asia',
+        numericCode: parseInt('004'),
+        flag: 'https://restcountries.eu/data/afg.svg',
       },
       {
-        name: "Åland Islands",
-        region: "Europe",
-        numericCode: parseInt("248"),
-        flag: "https://restcountries.eu/data/ala.svg",
-      }
-    ]
+        name: 'Åland Islands',
+        region: 'Europe',
+        numericCode: parseInt('248'),
+        flag: 'https://restcountries.eu/data/ala.svg',
+      },
+    ];
 
-    const result = cleanCountryData(mockCountries)
-    expect(result).toEqual(expected)
+    const result = cleanCountryData(mockCountries);
+    expect(result).toEqual(expected);
   });
 });

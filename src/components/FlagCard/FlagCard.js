@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import './FlagCard.scss'
 
 
-export const FlagCard = ({ countries, handleGuess }) => {
+export const FlagCard = ({ countries, handleGuess, flagsGuessed }) => {
   let name;
   let flag;
+  let wrongAnswer;
+
   
   if (countries[0]) {
     name = countries[0].name
@@ -14,14 +16,15 @@ export const FlagCard = ({ countries, handleGuess }) => {
 
   const wrongAnswers = countries.map(country => {
     return country.name
-  })
+  });
 
-  let wrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
-
-  if (wrongAnswer === name) {
-    wrongAnswer = 'Genovia'
+  if (countries.length > 1) {
+    do {
+      wrongAnswer = wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)];
+    } while (wrongAnswer === name)
+  } else {
+    wrongAnswer = flagsGuessed[Math.floor(Math.random() * flagsGuessed.length)].name;
   }
-
 
   return (
     <section className="flag-card-container">

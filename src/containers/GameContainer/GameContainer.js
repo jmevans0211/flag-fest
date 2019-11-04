@@ -11,7 +11,6 @@ export class GameContainer extends Component {
     this.state = {
       points: 0,
       flagsGuessed: [],
-      roundComplete: false
     }
   }
 
@@ -34,12 +33,11 @@ export class GameContainer extends Component {
   
   render() {
    const { countries } = this.props
-    console.log('points--->', this.state.points)
-    console.log('flags guessed--->', this.state.flagsGuessed)
+
     return (
       <main>
-        {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess}/>}
-        {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed}/>}
+        {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess} flagsGuessed={this.state.flagsGuessed} />}
+        {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed} />}
         {countries.length !== 0 && 
           <Link to="/">
             <p>Start Over</p>

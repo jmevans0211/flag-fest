@@ -1,16 +1,8 @@
 $button-color-next-page: #00E1FF;
 
-// .flag-card-container {
-//   margin-top: 30px;
-//   display: grid;
-//   grid-template-columns: 800px 800px;
-//   grid-template-rows: auto auto;
-//   grid-template-areas: "card-flag card-flag"
-//                        "positionA positionB"                    
-// }
-
 .answer-container {
   margin-top: 30px;
+  padding: 0 6%;
   display: grid;
   grid-template-columns: 800px 800px;
   grid-template-rows: auto;
@@ -26,7 +18,7 @@ $button-color-next-page: #00E1FF;
 }
 
 .card-flag {
-  // grid-area: card-flag;
+  padding: 2% 31%;
   width: 700px;
 }
 

@@ -16,7 +16,7 @@ describe('actions', () => {
         region: 'Europe',
       },
     ];
-    
+
     const expectedAction = {
       type: 'SAVE_COUNTRIES',
       countries: countries,
@@ -36,6 +36,4 @@ describe('actions', () => {
 
     expect(result).toEqual(expectedAction);
   });
-
-
 });

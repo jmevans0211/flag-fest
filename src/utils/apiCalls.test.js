@@ -41,7 +41,7 @@ describe('fetchData', () => {
   it('should return an error if the server is down', () => {
     window.fetch = jest.fn().mockImplementation(() => ({
       status: 500,
-    }))
+    }));
 
     expect(fetchData()).rejects.toEqual(Error());
   });

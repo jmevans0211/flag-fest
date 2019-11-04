@@ -78,7 +78,7 @@ export class ChooseRegion extends Component {
   }
 
   resetState = () => {
-    this.setState({region: '', tenLimit: false})
+    this.setState({region: '', activeRegion: '', tenLimit: false, activeAmount: ''})
   }
 
   render() {

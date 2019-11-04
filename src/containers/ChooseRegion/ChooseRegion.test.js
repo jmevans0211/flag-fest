@@ -133,9 +133,49 @@ describe ('ChooseRegion', () => {
   it('should update state with an tenLimit when handleFlagAmount is called', () => {
     const expected = 'all';
 
-    expect(wrapper.state('activeAmount')).toEqual('q');
+    expect(wrapper.state('activeAmount')).toEqual('');
 
     wrapper.instance().handleFlagAmount('all');
+
+    expect(wrapper.state('activeAmount')).toEqual(expected);
+  });
+
+  it('should resetState of region', () => {
+    const expected = '';
+
+    wrapper.setState({region: 'Europe'})
+
+    wrapper.instance().resetState();
+
+    expect(wrapper.state('region')).toEqual(expected);
+  });
+
+  it('should resetState of tenLimit', () => {
+    const expected = false;
+
+    wrapper.setState({tenLimit: true})
+
+    wrapper.instance().resetState();
+
+    expect(wrapper.state('tenLimit')).toEqual(expected);
+  });
+
+  it('should resetState of activeRegion', () => {
+    const expected = '';
+
+    wrapper.setState({activeRegion: 'Europe'})
+
+    wrapper.instance().resetState();
+
+    expect(wrapper.state('activeRegion')).toEqual(expected);
+  });
+
+  it('should resetState of activeAmount', () => {
+    const expected = '';
+
+    wrapper.setState({activeAmount: 'ten'})
+
+    wrapper.instance().resetState();
 
     expect(wrapper.state('activeAmount')).toEqual(expected);
   });

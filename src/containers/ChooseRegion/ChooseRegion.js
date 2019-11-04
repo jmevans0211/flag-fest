@@ -125,7 +125,6 @@ export class ChooseRegion extends Component {
       </>
     )
   }
-
 }
 
 export const mapStateToProps = state => ({

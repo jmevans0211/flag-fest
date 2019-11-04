@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { FlagCard, mapStateToProps } from './FlagCard';
+// import { mapDispatchToProps } from '../ChooseRegion/ChooseRegion';
 
 describe ('FlagCard', () => {
   let wrapper;
@@ -108,6 +109,4 @@ describe('mapStateToProps', () => {
 
     expect(mappedProps).toEqual(expected);
   });
-
-
 });

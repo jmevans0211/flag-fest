@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { saveCountries } from './../../actions';
 import { ChooseRegion, mapStateToProps, mapDispatchToProps } from './ChooseRegion';
 
 describe ('ChooseRegion', () => {
@@ -74,3 +75,30 @@ describe('mapStateToProps', () => {
       expect(mappedProps).toEqual(expected);
     });
   });
+
+
+describe('mapDispatchToProps', () => {
+  it('should save countries based on region', () => {
+    const mockCountries = [
+      {
+        flag: "https://restcountries.eu/data/srb.svg",
+        name: "Serbia",
+        numericCode: 688,
+        region: "Europe"
+      },
+      {
+        flag: "https://restcountries.eu/data/lux.svg",
+        name: "Luxembourg",
+        numericCode: 442,
+        region: "Europe"
+      }
+    ]
+    const mockDispatch = jest.fn();
+    const actionToDispatch = saveCountries('SAVE_COUNTRIES', mockCountries);
+    const mappedProps = mapDispatchToProps(mockDispatch);
+
+    mappedProps.saveCountries('SAVE_COUNTRIES', mockCountries)
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+  });
+});

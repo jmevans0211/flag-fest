@@ -109,7 +109,7 @@ describe ('ChooseRegion', () => {
     expect(wrapper.state('region')).toEqual(expected);
   });
 
-  it('should update state with an activeRegion when handleRegion is called', () => {
+  it('should update state of activeRegion when handleRegion is called', () => {
     const mockEvent = { stopPropagation: jest.fn() }
     const expected = 'americas'
 
@@ -120,7 +120,7 @@ describe ('ChooseRegion', () => {
     expect(wrapper.state('activeRegion')).toEqual(expected);
   });
 
-  it('should update state with an tenLimit when handleFlagAmount is called', () => {
+  it('should update state of tenLimit when handleFlagAmount is called', () => {
     const expected = true;
 
     expect(wrapper.state('tenLimit')).toEqual(false);
@@ -130,7 +130,7 @@ describe ('ChooseRegion', () => {
     expect(wrapper.state('tenLimit')).toEqual(expected);
   });
 
-  it('should update state with an tenLimit when handleFlagAmount is called', () => {
+  it('should update state with of activeAmount when handleFlagAmount is called', () => {
     const expected = 'all';
 
     expect(wrapper.state('activeAmount')).toEqual('');

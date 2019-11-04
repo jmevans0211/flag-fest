@@ -57,14 +57,15 @@ describe ('GameContainer', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should update state of points when addPoints is called', () => {
+    const expected = 1;
 
-  // it('should update state of flagsGuessed when handleGuess is called', () => {
+    expect(wrapper.state('points')).toEqual(0);
 
-  // });
+    wrapper.instance().addPoints();
 
-  // it('should update state of points when handleGuess is called', () => {
-
-  // });
+    expect(wrapper.state('points')).toEqual(expected);
+  });
 
 });
 

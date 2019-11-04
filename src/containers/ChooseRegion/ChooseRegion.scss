@@ -7,6 +7,7 @@ $button-selection-color: #00B6FF;
 
 .choose-region-heading {
   font-size: 100px;
+  margin: 30px 0 60px 0;
 }
 
 .region {
@@ -18,7 +19,7 @@ $button-selection-color: #00B6FF;
 .region-button-container {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   padding: 0 60px;
 }
 
@@ -42,4 +43,21 @@ $button-selection-color: #00B6FF;
     margin: 10px 0;
     padding: 15px 0;
   }
+}
+
+.play-button {
+  background-color: $button-color-next-page;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 10px auto;
+  padding: 25px 0;
+  width: 30%;
+}
+
+.back-button {
+  color: #4B0082;
+  font-size: 20px;
+  margin: 30px 0 0 55px;
 }

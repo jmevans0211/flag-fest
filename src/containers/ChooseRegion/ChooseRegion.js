@@ -104,16 +104,16 @@ export class ChooseRegion extends Component {
             </div>
           </div>
           <div className="flag-amount-container">
-            <h4 type="button" onClick={() => this.handleFlagAmount('ten')}>Test me on ten flags for this region</h4>
-            <h4 type="button" onClick={() => this.handleFlagAmount('all')}>Test Me On All Flags For This Region</h4>
+            <h4 type="button" onClick={() => this.handleFlagAmount('ten')} role="button">Test me on ten flags for this region</h4>
+            <h4 type="button" onClick={() => this.handleFlagAmount('all')} role="button">Test Me On All Flags For This Region</h4>
           </div>
           <Link className="router-link" to='/flag-fest/play'>
-            <h4 className="play-button" onClick={() => this.filterCountries()}>Play!</h4>
+            <h4 className="play-button" onClick={() => this.filterCountries()} role="button">Play!</h4>
           </Link>
         </main>
         <footer className="choose-region-footer">
           <Link className="router-link" to=''>
-            <h4 className="back-button">Back</h4>
+            <h4 className="back-button"> ⏎ Back</h4>
           </Link>
         </footer>
       </>

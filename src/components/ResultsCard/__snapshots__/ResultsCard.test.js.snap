@@ -21,6 +21,7 @@ exports[`ResultsCard should match snapshot 1`] = `
       key="688"
     >
       <img
+        alt="Serbia"
         src="https://restcountries.eu/data/srb.svg"
       />
       <p>
@@ -32,6 +33,7 @@ exports[`ResultsCard should match snapshot 1`] = `
       key="442"
     >
       <img
+        alt="Luxembourg"
         src="https://restcountries.eu/data/lux.svg"
       />
       <p>

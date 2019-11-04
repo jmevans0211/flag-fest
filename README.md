@@ -1,4 +1,4 @@
-# Flag Fest
+# Flag Fest <img src="https://svgsilh.com/svg/1674807.svg" width=25 />
 
 **Contributor:** [Jeannie Evans](https://github.com/jmevans0211/)
 
@@ -50,10 +50,14 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 
 ### Tech Stack Used
 
-#### React
-#### Redux
-#### React Router
-#### Testing: Jest/Enzyme
-#### Sass
+**React**
+
+**Redux**
+
+**React Router**
+
+**Testing: Jest/Enzyme**
+
+**Sass**
 
 

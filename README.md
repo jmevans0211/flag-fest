@@ -46,3 +46,14 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 ![Game Page](https://user-images.githubusercontent.com/48900496/68165785-9f1b1f00-ff1d-11e9-987e-f112b78d3c7f.png)
 
 </details>
+
+
+### Tech Stack Used
+
+#### React
+#### Redux
+#### React Router
+#### Testing: Jest/Enzyme
+#### Sass
+
+

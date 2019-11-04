@@ -1,3 +1,19 @@
 .flag-card-container {
   border: 1px solid purple;
+  display: grid;
+  grid-template-columns: auto 30px 250px;
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas: "card-flag card-flag card-flag"
+                       "positionA . positionB"
+                       
 }
+
+.positionA {
+  grid-area: positionA;
+}
+
+
+.positionB {
+  grid-area: positionB;
+}
+

@@ -28,7 +28,7 @@ export const FlagCard = ({ countries, handleGuess, flagsGuessed, correctClass, w
 
   return (
     <section className="flag-card-container">
-      <img src={flag} />
+      <img className='card-flag' src={flag} />
       <button className={correctClass} onClick={() => handleGuess('correct')}>{name}</button>
       <button className={wrongClass} onClick={() => handleGuess('incorrect')}>{wrongAnswer}</button>
     </section>

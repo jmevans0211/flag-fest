@@ -12,8 +12,8 @@ export class GameContainer extends Component {
       points: 0,
       flagsGuessed: [],
       positions: [1, 2],
-      correctClass: '',
-      wrongClass: ''
+      correctClass: 1,
+      wrongClass: 1,
     }
   }
 
@@ -22,9 +22,11 @@ export class GameContainer extends Component {
   }
 
   handleButtonClass = () => {
-    this.setState({correctClass: this.state.positions[Math.floor(Math.random() * this.state.positions.length)]})
+    let randomNumber = this.state.positions[Math.floor(Math.random() * this.state.positions.length)]
 
-    if(this.state.correctClass === 1){
+    this.setState({correctClass: randomNumber})
+
+    if (this.state.correctClass === 1) {
       this.setState({wrongClass: 2})
     }
   }

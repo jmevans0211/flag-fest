@@ -47,6 +47,30 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 
 </details>
 
+### Work Flow
+
+<details>
+  <summary>Wire Frames</summary>
+  
+![flag-fest-wireframe1](https://user-images.githubusercontent.com/48900496/68167653-6ed67f00-ff23-11e9-8e0c-52ca6b53a539.jpg)
+
+![flag-fest-wireframe2](https://user-images.githubusercontent.com/48900496/68167663-772eba00-ff23-11e9-98c3-3ed6dc8806d4.jpg)
+
+![flag-fest-wireframe3](https://user-images.githubusercontent.com/48900496/68167669-7b5ad780-ff23-11e9-8c39-b57600ae1af3.jpg)
+
+</details>
+
+<details>
+  <summary>Learning Goals</summary>
+  
+  - Continue working with API calls by fetching and cleaning data
+  - Work with React and Redux with fluency
+  - Testing: Unit, async, integration
+  - Intuitive user experience and design
+  
+</details>
+
+
 
 ### Tech Stack Used
 

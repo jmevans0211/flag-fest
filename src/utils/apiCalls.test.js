@@ -29,13 +29,13 @@ describe('fetchData', () => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok: false,
-        statusText: "Error. Could not fetch."
+        statusText: 'Error. Could not fetch.',
       });
     });
 
     const mockUrl = 'https://kittens.com';
 
-    expect(fetchData(mockUrl)).rejects.toEqual(Error("Error. Could not fetch."));
+    expect(fetchData(mockUrl)).rejects.toEqual(Error('Error. Could not fetch.'));
   });
 
   it('should return an error if the server is down', () => {

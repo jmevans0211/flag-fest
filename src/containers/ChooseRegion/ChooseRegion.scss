@@ -60,8 +60,11 @@ $gray: #E0E0E0;
   width: 30%;
 }
 
-.hidden {
+.selected-region {
   border: 5px solid $button-selection-color;
-  // visibility: hidden;
   padding: 2px;
+}
+
+.active-amount {
+  border: 5px solid black;
 }

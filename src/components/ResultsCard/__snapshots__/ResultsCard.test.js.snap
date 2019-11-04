@@ -1,38 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ResultsCard should match snapshot 1`] = `
-<main>
-  <h4>
+<main
+  className="results-card"
+>
+  <h4
+    className="final-score"
+  >
     Score: 
     1
     /
     2
   </h4>
   <section
-    className="correct-answer-display"
+    className="correct-answers-display"
   >
     Correct Answers: 
-    <div>
-      <p>
-        Serbia
-      </p>
+    <div
+      className="correct-answer"
+    >
       <img
         src="https://restcountries.eu/data/srb.svg"
       />
-    </div>
-    <div>
       <p>
-        Luxembourg
+        Serbia
       </p>
+    </div>
+    <div
+      className="correct-answer"
+    >
       <img
         src="https://restcountries.eu/data/lux.svg"
       />
+      <p>
+        Luxembourg
+      </p>
     </div>
   </section>
   <Link
+    className="play-again-link"
     to="/"
   >
-    <p>
+    <p
+      className="play-again"
+      role="button"
+    >
       Play Again!
     </p>
   </Link>

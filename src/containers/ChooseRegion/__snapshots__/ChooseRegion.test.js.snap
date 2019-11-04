@@ -1,72 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ChooseRegion should match snapshot 1`] = `
-<main>
-  <h1>
-    Choose a Region
-  </h1>
-  <img
-    className="region"
-    onClick={[Function]}
-    src="https://svgsilh.com/svg/151640.svg"
-  />
-  <img
-    className="region"
-    onClick={[Function]}
-    src="https://svgsilh.com/svg/151641.svg"
-  />
-  <img
-    className="region"
-    onClick={[Function]}
-    src="https://svgsilh.com/svg/307197.svg"
-  />
-  <img
-    className="region"
-    onClick={[Function]}
-    src="https://svgsilh.com/svg_v2/714733.svg"
-  />
-  <img
-    className="region"
-    onClick={[Function]}
-    src="https://svgsilh.com/svg/23512.svg"
-  />
-  <div
-    className="flag-amount-container"
+<Fragment>
+  <main
+    className="choose-region-main"
   >
-    <h4>
-      Choose How Many Flags You'd Like To Be Tested On
-    </h4>
-    <button
-      onClick={[Function]}
-      type="button"
+    <h1
+      className="choose-region-heading"
     >
-      All Flags for this Region
-    </button>
-    <button
-      onClick={[Function]}
-      type="button"
+      Choose a Region
+    </h1>
+    <div
+      className="region-button-container"
     >
-      Test me on 10 flags for this region
-    </button>
-  </div>
-  <Link
-    to="/flag-fest/play"
+      <div
+        className="region-img-p"
+      >
+        <img
+          className="region"
+          onClick={[Function]}
+          src="https://svgsilh.com/svg/151640.svg"
+        />
+        <p>
+          Africa
+        </p>
+      </div>
+      <div
+        className="region-img-p"
+      >
+        <img
+          className="region"
+          onClick={[Function]}
+          src="https://svgsilh.com/svg/151641.svg"
+        />
+        <p>
+          Europe
+        </p>
+      </div>
+      <div
+        className="region-img-p"
+      >
+        <img
+          className="region"
+          onClick={[Function]}
+          src="https://svgsilh.com/svg/307197.svg"
+        />
+        <p>
+          Asia
+        </p>
+      </div>
+      <div
+        className="region-img-p"
+      >
+        <img
+          className="region"
+          onClick={[Function]}
+          src="https://svgsilh.com/svg_v2/714733.svg"
+        />
+        <p>
+          Americas
+        </p>
+      </div>
+      <div
+        className="region-img-p"
+      >
+        <img
+          className="region"
+          onClick={[Function]}
+          src="https://svgsilh.com/svg/23512.svg"
+        />
+        <p>
+          Oceania
+        </p>
+      </div>
+    </div>
+    <div
+      className="flag-amount-container"
+    >
+      <h4
+        onClick={[Function]}
+        role="button"
+        type="button"
+      >
+        Test me on 
+        <span>
+          ten
+        </span>
+         flags for this region
+      </h4>
+      <h4
+        onClick={[Function]}
+        role="button"
+        type="button"
+      >
+        Test Me On 
+        <span>
+          All
+        </span>
+         Flags For This Region
+      </h4>
+    </div>
+    <Link
+      className="router-link"
+      to="/flag-fest/play"
+    >
+      <h4
+        className="play-button"
+        onClick={[Function]}
+        role="button"
+      >
+        Play!
+      </h4>
+    </Link>
+  </main>
+  <footer
+    className="choose-region-footer"
   >
-    <h4
-      className="play-button"
-      onClick={[Function]}
+    <Link
+      className="router-link"
+      to=""
     >
-      Play!
-    </h4>
-  </Link>
-  <Link
-    to=""
-  >
-    <h4
-      className="back-button"
-    >
-      Back
-    </h4>
-  </Link>
-</main>
+      <h4
+        className="back-button"
+      >
+         ⏎ Back
+      </h4>
+    </Link>
+  </footer>
+</Fragment>
 `;

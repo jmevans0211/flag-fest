@@ -5,17 +5,24 @@ exports[`FlagCard should match snapshot 1`] = `
   className="flag-card-container"
 >
   <img
+    className="card-flag"
     src="https://restcountries.eu/data/srb.svg"
   />
-  <button
-    onClick={[Function]}
+  <div
+    className="answer-container"
   >
-    Serbia
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Luxembourg
-  </button>
+    <h6
+      onClick={[Function]}
+      role="button"
+    >
+      Serbia
+    </h6>
+    <h6
+      onClick={[Function]}
+      role="button"
+    >
+      Luxembourg
+    </h6>
+  </div>
 </section>
 `;

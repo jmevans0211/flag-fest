@@ -1,4 +1,4 @@
-const mockData = [
+export const mockData = [
   {
     name: "Afghanistan",
     topLevelDomain: [

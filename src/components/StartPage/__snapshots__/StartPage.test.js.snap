@@ -2,16 +2,19 @@
 
 exports[`StartPage should match snapshot 1`] = `
 <div
-  className="start-container"
+  className="start-content"
 >
-  <div
-    className="start-content"
+  <h1
+    className="flag-fest-heading"
   >
-    <h1>
-      Flag Fest
-    </h1>
-    <Link
-      to="/flag-fest"
+    Flag Fest
+  </h1>
+  <Link
+    className="router-link"
+    to="/flag-fest"
+  >
+    <div
+      className="start-button-container"
     >
       <h3
         className="start-button"
@@ -19,7 +22,7 @@ exports[`StartPage should match snapshot 1`] = `
       >
         START GAME
       </h3>
-    </Link>
-  </div>
+    </div>
+  </Link>
 </div>
 `;

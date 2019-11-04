@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { saveCountries, removeCountryGuessed } from './../../actions';
-import FlagCard from './../../components/FlagCard/FlagCard';
+import FlagCard from '../FlagCard/FlagCard';
 import ResultsCard from './../../components/ResultsCard/ResultsCard';
 
 export class GameContainer extends Component {
@@ -11,9 +11,25 @@ export class GameContainer extends Component {
     this.state = {
       points: 0,
       flagsGuessed: [],
+      correctClass: 'positionA',
+      wrongClass: 'positionB',
     }
   }
 
+  componentDidMount() {
+    this.handleButtonClass();
+  }
+
+  handleButtonClass = () => {
+    let positions = [1, 2]
+    let randomNumber = positions[Math.floor(Math.random() * positions.length)]
+
+    if (randomNumber === 1) {
+      this.setState({correctClass: 'positionA', wrongClass: 'positionB'})
+    } else {
+      this.setState({correctClass: 'positionB', wrongClass: 'positionA'})
+    }
+  }
 
   handleGuess = (answer) => {
     const { countries, removeCountryGuessed } = this.props
@@ -21,9 +37,11 @@ export class GameContainer extends Component {
       this.addPoints()
       this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
       removeCountryGuessed();
+      this.handleButtonClass()
     } else if (answer === 'incorrect') {
       this.setState({ flagsGuessed: [...this.state.flagsGuessed, countries[0]]})
       removeCountryGuessed();
+      this.handleButtonClass();
     }
   }
 
@@ -36,11 +54,11 @@ export class GameContainer extends Component {
 
     return (
       <main>
-        {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess} flagsGuessed={this.state.flagsGuessed} />}
+        {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess} flagsGuessed={this.state.flagsGuessed} correctClass={this.state.correctClass} wrongClass={this.state.wrongClass} handleButtonClass={this.handleButtonClass}/>}
         {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed} />}
         {countries.length !== 0 && 
-          <Link to="/">
-            <p>Start Over</p>
+          <Link className="router-link" to="/">
+            <p>⏎ Start Over</p>
           </Link>
         }
       </main>

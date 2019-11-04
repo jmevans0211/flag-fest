@@ -1,3 +1,61 @@
+$button-color-next-page: #00E1FF;
+$button-selection-color: #00B6FF;
+$gray: #E0E0E0;
+
+.choose-region-main {
+  text-align: center;
+}
+
+.choose-region-heading {
+  font-size: 100px;
+  margin: 30px 0 60px 0;
+}
+
 .region {
-  width: 100px;
+  cursor: pointer;
+  margin: 0 30px;
+  width: 150px;
+}
+
+.region-button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.region-img-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flag-amount-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 30%;
+  h4 {
+    background-color: $button-selection-color;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 10px 0;
+    padding: 15px 0;
+    span {
+      color: $gray;
+    }
+  }
+}
+
+.play-button {
+  background-color: $button-color-next-page;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 10px auto;
+  padding: 25px 0;
+  width: 30%;
 }

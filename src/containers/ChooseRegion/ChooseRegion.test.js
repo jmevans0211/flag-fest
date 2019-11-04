@@ -130,6 +130,16 @@ describe ('ChooseRegion', () => {
     expect(wrapper.state('tenLimit')).toEqual(expected);
   });
 
+  it('should update state with an tenLimit when handleFlagAmount is called', () => {
+    const expected = 'all';
+
+    expect(wrapper.state('activeAmount')).toEqual('q');
+
+    wrapper.instance().handleFlagAmount('all');
+
+    expect(wrapper.state('activeAmount')).toEqual(expected);
+  });
+
 });
 
 describe('mapStateToProps', () => {

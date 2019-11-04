@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './FlagCard.scss'
 
 
@@ -42,3 +43,11 @@ export const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, null)(FlagCard);
+
+FlagCard.propTypes = {
+  countries: PropTypes.array.isRequired,
+  handleGuess: PropTypes.func.isRequired,
+  flagsGuessed: PropTypes.array.isRequired,
+  correctClass: PropTypes.string.isRequired,
+  wrongClass: PropTypes.string.isRequired,
+}

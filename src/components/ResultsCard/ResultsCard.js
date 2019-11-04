@@ -28,4 +28,4 @@ export default ResultsCard;
 ResultsCard.propTypes = {
   points: PropTypes.number.isRequired,
   flagsGuessed: PropTypes.array.isRequired,
-}
+};

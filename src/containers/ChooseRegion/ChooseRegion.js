@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { fetchData } from './../../utils/apiCalls';
 import { cleanCountryData } from './../../utils/helpers';
 import { saveCountries } from '../../actions';
@@ -136,3 +137,8 @@ export const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChooseRegion);
+
+ChooseRegion.propTypes = {
+  countries: PropTypes.array.isRequired,
+  saveCountries: PropTypes.func.isRequired,
+}

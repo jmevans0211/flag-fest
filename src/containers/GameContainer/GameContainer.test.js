@@ -27,6 +27,17 @@ describe ('GameContainer', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should update state of points when handleGuess is called', () => {
 
+
+  });
+
+  // it('should update state of flagsGuessed when handleGuess is called', () => {
+
+  // });
+
+  // it('should update state of points when handleGuess is called', () => {
+
+  // });
 
 });

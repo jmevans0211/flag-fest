@@ -11,7 +11,6 @@ export class GameContainer extends Component {
     this.state = {
       points: 0,
       flagsGuessed: [],
-      roundComplete: false
     }
   }
 

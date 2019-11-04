@@ -11,7 +11,20 @@ export class GameContainer extends Component {
     this.state = {
       points: 0,
       flagsGuessed: [],
+      positions: [1, 2],
+      correctClass: '',
+      wrongClass: ''
     }
+  }
+
+  componentDidMount() {
+    this.handleButtonClass()
+  }
+
+  handleButtonClass = () => {
+    this.setState({correctClass: this.state.positions[Math.floor(Math.random() * this.state.positions.length)]})
+
+    this.setState({wrongClass: this.state.correctClass === 1 ? 2 : 1})
   }
 
 
@@ -36,7 +49,7 @@ export class GameContainer extends Component {
 
     return (
       <main>
-        {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess} flagsGuessed={this.state.flagsGuessed} />}
+        {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess} flagsGuessed={this.state.flagsGuessed} correctClass={this.state.correctClass} wrongClass={this.state.wrongClass} />}
         {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed} />}
         {countries.length !== 0 && 
           <Link to="/">

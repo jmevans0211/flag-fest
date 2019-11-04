@@ -13,6 +13,7 @@ export class ChooseRegion extends Component {
       region: '',
       tenLimit: false,
     }
+  
   }
 
   handleRegion = (region) => {
@@ -73,6 +74,8 @@ export class ChooseRegion extends Component {
   resetState = () => {
     this.setState({region: '', tenLimit: false})
   }
+
+
 
 
   render() {

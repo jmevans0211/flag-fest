@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { GameContainer, mapStateToProps, mapDispatchToProps } from './GameContainer';
+import { saveCountries, removeCountryGuessed } from '../../actions';
 
 describe ('GameContainer', () => {
   let wrapper;
@@ -97,5 +98,44 @@ describe('mapStateToProps', () => {
       const mappedProps = mapStateToProps(mockState);
 
       expect(mappedProps).toEqual(expected);
+    });
+  });
+
+  describe('mapDispatchToProps', () => {
+    let mockCountries;
+    let mockDispatch;
+    beforeEach(() => {
+      mockCountries = [
+        {
+          flag: "https://restcountries.eu/data/srb.svg",
+          name: "Serbia",
+          numericCode: 688,
+          region: "Europe"
+        },
+        {
+          flag: "https://restcountries.eu/data/lux.svg",
+          name: "Luxembourg",
+          numericCode: 442,
+          region: "Europe"
+        }
+      ]
+      mockDispatch = jest.fn();
+    })
+    it('should get countries based on region', () => {
+      const actionToDispatch = saveCountries('SAVE_COUNTRIES', mockCountries);
+      const mappedProps = mapDispatchToProps(mockDispatch);
+  
+      mappedProps.saveCountries('SAVE_COUNTRIES', mockCountries)
+  
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    });
+
+    it('should delete country from store', () => {
+      const actionToDispatch = removeCountryGuessed('REMOVE_COUNTRY_GUESSED');
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      
+      mappedProps.removeCountryGuessed('REMOVE_COUNTRY_GUESSED');
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     });
   });

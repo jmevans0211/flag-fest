@@ -1,19 +1,19 @@
-import * as actions from '../actions';
+import * as actions from './actions';
 
 describe('actions', () => {
   it('should have a type of SAVE_COUNTRIES', () => {
     const countries = [
       {
-        flag: "https://restcountries.eu/data/srb.svg",
-        name: "Serbia",
+        flag: 'https://restcountries.eu/data/srb.svg',
+        name: 'Serbia',
         numericCode: 688,
         region: "Europe"
       },
       {
-        flag: "https://restcountries.eu/data/lux.svg",
-        name: "Luxembourg",
+        flag: 'https://restcountries.eu/data/lux.svg',
+        name: 'Luxembourg',
         numericCode: 442,
-        region: "Europe"
+        region: 'Europe'
       }
     ]
     
@@ -22,9 +22,9 @@ describe('actions', () => {
       countries: countries
     }
 
-    const result = actions.saveCountries(countries)
+    const result = actions.saveCountries(countries);
 
-    expect(result).toEqual(expectedAction)
+    expect(result).toEqual(expectedAction);
   });
 
   it('should have a type of REMOVE_COUNTRY_GUESSED', () => {
@@ -32,9 +32,9 @@ describe('actions', () => {
       type: 'REMOVE_COUNTRY_GUESSED',
     }
 
-    const result = actions.removeCountryGuessed()
+    const result = actions.removeCountryGuessed();
 
-    expect(result).toEqual(expectedAction)
+    expect(result).toEqual(expectedAction);
   });
 
 

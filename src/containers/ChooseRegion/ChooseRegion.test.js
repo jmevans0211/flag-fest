@@ -28,11 +28,11 @@ describe ('ChooseRegion', () => {
   });
 
   it.skip('should call handleRegion when region is clicked', () => {
-    const mockHandleRegion = jest.fn();
+    const mockEvent = { stopPropagation: jest.fn() }
 
     wrapper.find('img').at(0).simulate('click');
 
-    expect(mockHandleRegion).toHaveBeenCalledWith('Africa')
+    expect(wrapper.instance().handleRegion).toHaveBeenCalledWith(mockEvent, 'Africa')
 
   });
 

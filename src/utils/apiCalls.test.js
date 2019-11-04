@@ -26,17 +26,25 @@ describe('fetchData', () => {
     expect(results).toEqual(mockData)
   });
 
-  it('should return an error', () => {
+  it('should return an error when promise resolved is not ok', () => {
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok: false,
-        statusText: "Invalid API key: You must be granted a valid key."
+        statusText: "Error. Could not fetch."
       })
     });
 
     const mockUrl = 'https://kittens.com';
 
-    expect(fetchData(mockUrl)).rejects.toEqual(Error("Invalid API key: You must be granted a valid key."));
+    expect(fetchData(mockUrl)).rejects.toEqual(Error("Error. Could not fetch."));
+  });
+
+  it('should return an error if the server is down', () => {
+    window.fetch = jest.fn().mockImplementation(() => ({
+      status: 500
+    }))
+
+    expect(fetchData()).rejects.toEqual(Error());
   });
  
 });

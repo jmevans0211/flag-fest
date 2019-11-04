@@ -78,6 +78,7 @@ exports[`ChooseRegion should match snapshot 1`] = `
       className="flag-amount-container"
     >
       <h4
+        className=""
         onClick={[Function]}
         role="button"
         type="button"
@@ -89,6 +90,7 @@ exports[`ChooseRegion should match snapshot 1`] = `
          flags for this region
       </h4>
       <h4
+        className=""
         onClick={[Function]}
         role="button"
         type="button"

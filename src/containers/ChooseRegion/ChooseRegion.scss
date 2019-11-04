@@ -1,5 +1,6 @@
 $button-color-next-page: #00E1FF;
 $button-selection-color: #00B6FF;
+$gray: #E0E0E0;
 
 .choose-region-main {
   text-align: center;
@@ -43,7 +44,7 @@ $button-selection-color: #00B6FF;
     margin: 10px 0;
     padding: 15px 0;
     span {
-      color: #E0E0E0;
+      color: $gray;
     }
   }
 }

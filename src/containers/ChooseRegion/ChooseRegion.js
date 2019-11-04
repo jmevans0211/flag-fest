@@ -12,21 +12,26 @@ export class ChooseRegion extends Component {
     this.state = {
       region: '',
       tenLimit: false,
+      activeRegion: '',
     }
   
   }
 
-  handleRegion = (region) => {
+  handleRegion = (event, region) => {
     if (region === 'africa') {
-      this.setState({ region: 'Africa' })
+      event.stopPropagation() 
+      this.setState({ region: 'Africa', activeRegion: 'africa' })
     } else if (region === 'europe') {
-      this.setState({ region: 'Europe' })
+      this.setState({ region: 'Europe', activeRegion: 'europe'  })
     } else if (region === 'asia') {
-      this.setState({ region: 'Asia' })
+      event.stopPropagation() 
+      this.setState({ region: 'Asia', activeRegion: 'asia'  })
     } else if (region === 'americas') {
-      this.setState({ region: 'Americas' })
+      event.stopPropagation() 
+      this.setState({ region: 'Americas', activeRegion: 'americas'  })
     } else if (region === 'oceania') {
-      this.setState({ region: 'Oceania'})
+      event.stopPropagation() 
+      this.setState({ region: 'Oceania', activeRegion: 'oceania' })
     }
   }
 
@@ -75,9 +80,6 @@ export class ChooseRegion extends Component {
     this.setState({region: '', tenLimit: false})
   }
 
-
-
-
   render() {
     console.log(this.state)
     return (
@@ -86,23 +88,23 @@ export class ChooseRegion extends Component {
           <h1 className="choose-region-heading">Choose a Region</h1>
           <div className="region-button-container">
             <div className="region-img-p">
-              <img className="region" onClick={() => this.handleRegion('africa')} src="https://svgsilh.com/svg/151640.svg" />
+              <img className={this.state.activeRegion === 'africa' ? "region hidden" : "region"} onClick={(event) => this.handleRegion(event, 'africa')} src="https://svgsilh.com/svg/151640.svg" />
               <p>Africa</p>
             </div>
             <div className="region-img-p">
-              <img className="region" onClick={() => this.handleRegion('europe')} src="https://svgsilh.com/svg/151641.svg" />
+              <img className={this.state.activeRegion === 'europe' ? "region hidden" : "region"}  onClick={(event) => this.handleRegion(event, 'europe')} src="https://svgsilh.com/svg/151641.svg" />
               <p>Europe</p>
             </div>
             <div className="region-img-p">
-              <img className="region" onClick={() => this.handleRegion('asia')} src="https://svgsilh.com/svg/307197.svg" />
+              <img className={this.state.activeRegion === 'asia' ? "region hidden" : "region"}  onClick={(event) => this.handleRegion(event, 'asia')} src="https://svgsilh.com/svg/307197.svg" />
               <p>Asia</p>
             </div>
             <div className="region-img-p">
-              <img className="region" onClick={() => this.handleRegion('americas')} src="https://svgsilh.com/svg_v2/714733.svg" />
+              <img className={this.state.activeRegion === 'americas' ? "region hidden" : "region"}  onClick={(event) => this.handleRegion(event, 'americas')} src="https://svgsilh.com/svg_v2/714733.svg" />
               <p>Americas</p>
             </div>
             <div className="region-img-p">
-              <img className="region" onClick={() => this.handleRegion('oceania')} src="https://svgsilh.com/svg/23512.svg" />
+              <img className={this.state.activeRegion === 'oceania' ? "region hidden" : "region"}  onClick={(event) => this.handleRegion(event, 'oceania')} src="https://svgsilh.com/svg/23512.svg" />
               <p>Oceania</p>
             </div>
           </div>

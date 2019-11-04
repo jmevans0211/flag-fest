@@ -59,3 +59,9 @@ $gray: #E0E0E0;
   padding: 25px 0;
   width: 30%;
 }
+
+.hidden {
+  border: 5px solid $button-selection-color;
+  // visibility: hidden;
+  padding: 2px;
+}

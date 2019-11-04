@@ -57,7 +57,7 @@ export class GameContainer extends Component {
         {countries.length !== 0 && <FlagCard handleGuess={this.handleGuess} flagsGuessed={this.state.flagsGuessed} correctClass={this.state.correctClass} wrongClass={this.state.wrongClass} handleButtonClass={this.handleButtonClass}/>}
         {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed} />}
         {countries.length !== 0 && 
-          <Link to="/">
+          <Link className="router-link" to="/">
             <p>Start Over</p>
           </Link>
         }

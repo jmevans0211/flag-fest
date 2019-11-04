@@ -1,19 +1,34 @@
+$button-color-next-page: #00E1FF;
+
 .flag-card-container {
-  border: 1px solid purple;
+  margin-top: 30px;
   display: grid;
-  grid-template-columns: auto 30px 250px;
-  grid-template-rows: 50px auto 50px;
-  grid-template-areas: "card-flag card-flag card-flag"
-                       "positionA . positionB"
-                       
+  grid-template-columns: 800px 800px;
+  grid-template-rows: auto auto;
+  grid-template-areas: "card-flag card-flag"
+                       "positionA positionB"                    
 }
 
 .positionA {
   grid-area: positionA;
 }
 
-
 .positionB {
   grid-area: positionB;
 }
 
+.card-flag {
+  grid-area: card-flag;
+  width: 700px;
+}
+
+h6 {
+  background-color: $button-color-next-page;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 10px auto;
+  padding: 25px 0;
+  width: 30%;
+}

@@ -120,6 +120,16 @@ describe ('ChooseRegion', () => {
     expect(wrapper.state('activeRegion')).toEqual(expected);
   });
 
+  it('should update state with an tenLimit when handleFlagAmount is called', () => {
+    const expected = true;
+
+    expect(wrapper.state('tenLimit')).toEqual(false);
+
+    wrapper.instance().handleFlagAmount('ten');
+
+    expect(wrapper.state('tenLimit')).toEqual(expected);
+  });
+
 });
 
 describe('mapStateToProps', () => {

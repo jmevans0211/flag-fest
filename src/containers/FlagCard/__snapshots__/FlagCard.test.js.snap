@@ -5,6 +5,7 @@ exports[`FlagCard should match snapshot 1`] = `
   className="flag-card-container"
 >
   <img
+    alt="Flag"
     className="card-flag"
     src="https://restcountries.eu/data/srb.svg"
   />
@@ -34,6 +35,7 @@ exports[`FlagCard should match snapshot when answer buttons get different classN
   className="flag-card-container"
 >
   <img
+    alt="Flag"
     className="card-flag"
     src="https://restcountries.eu/data/srb.svg"
   />

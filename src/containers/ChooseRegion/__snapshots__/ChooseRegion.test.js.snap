@@ -17,6 +17,7 @@ exports[`ChooseRegion should match snapshot 1`] = `
         className="region-img-p"
       >
         <img
+          alt="Silouetted image of Africa and button to select region"
           className="region"
           onClick={[Function]}
           src="https://svgsilh.com/svg/151640.svg"
@@ -29,6 +30,7 @@ exports[`ChooseRegion should match snapshot 1`] = `
         className="region-img-p"
       >
         <img
+          alt="Silouetted image of Europe and button to select region"
           className="region"
           onClick={[Function]}
           src="https://svgsilh.com/svg/151641.svg"
@@ -41,6 +43,7 @@ exports[`ChooseRegion should match snapshot 1`] = `
         className="region-img-p"
       >
         <img
+          alt="Silouetted image of Asia and button to select region"
           className="region"
           onClick={[Function]}
           src="https://svgsilh.com/svg/307197.svg"
@@ -53,6 +56,7 @@ exports[`ChooseRegion should match snapshot 1`] = `
         className="region-img-p"
       >
         <img
+          alt="Silouetted image of the Americas and button to select region"
           className="region"
           onClick={[Function]}
           src="https://svgsilh.com/svg_v2/714733.svg"
@@ -65,6 +69,7 @@ exports[`ChooseRegion should match snapshot 1`] = `
         className="region-img-p"
       >
         <img
+          alt="Silouetted image of Oceania and button to select region"
           className="region"
           onClick={[Function]}
           src="https://svgsilh.com/svg/23512.svg"

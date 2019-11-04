@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './FlagCard.scss'
 
 
@@ -28,7 +29,7 @@ export const FlagCard = ({ countries, handleGuess, flagsGuessed, correctClass, w
 
   return (
     <section className="flag-card-container">
-      <img className='card-flag' src={flag} />
+      <img className='card-flag' src={flag} alt='Flag'/>
       <div className="answer-container">
         <h6 className={correctClass} onClick={() => handleGuess('correct')} role="button">{name}</h6>
         <h6 className={wrongClass} onClick={() => handleGuess('incorrect')} role="button">{wrongAnswer}</h6>
@@ -42,3 +43,11 @@ export const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, null)(FlagCard);
+
+FlagCard.propTypes = {
+  countries: PropTypes.array.isRequired,
+  handleGuess: PropTypes.func.isRequired,
+  flagsGuessed: PropTypes.array.isRequired,
+  correctClass: PropTypes.string.isRequired,
+  wrongClass: PropTypes.string.isRequired,
+}

@@ -29,7 +29,4 @@ describe ('ResultsCard', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-
-
 });

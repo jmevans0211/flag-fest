@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { saveCountries, removeCountryGuessed } from './../../actions';
 import FlagCard from '../FlagCard/FlagCard';
 import ResultsCard from './../../components/ResultsCard/ResultsCard';
@@ -77,4 +78,9 @@ export const mapDispatchToProps = dispatch => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameContainer);
 
+GameContainer.propTypes = {
+  countries: PropTypes.array.isRequired,
+  saveCountries: PropTypes.func,
+  removeCountryGuessed: PropTypes.func,
+}
 

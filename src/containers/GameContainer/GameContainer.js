@@ -80,7 +80,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(GameContainer);
 
 GameContainer.propTypes = {
   countries: PropTypes.array.isRequired,
-  saveCountries: PropTypes.func.isRequired,
-  removieCountryGuessed: PropTypes.func.isRequired,
+  saveCountries: PropTypes.func,
+  removeCountryGuessed: PropTypes.func,
 }
 

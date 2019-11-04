@@ -43,7 +43,7 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 <details>
   <summary>Game Page</summary>
 
-![Game Page](https://user-images.githubusercontent.com/48900496/68165785-9f1b1f00-ff1d-11e9-987e-f112b78d3c7f.png)
+![Game Page](https://user-images.githubusercontent.com/48900496/68167276-31252680-ff22-11e9-8980-aa100dca0f00.png)
 
 </details>
 

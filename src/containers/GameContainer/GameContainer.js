@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { saveCountries, removeCountryGuessed } from './../../actions';
-import FlagCard from './../../components/FlagCard/FlagCard';
+import FlagCard from '../FlagCard/FlagCard';
 import ResultsCard from './../../components/ResultsCard/ResultsCard';
 
 export class GameContainer extends Component {

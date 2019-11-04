@@ -9,7 +9,7 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 #### How to Play
 
 1. In your terminal
-  a. `git clone blah blah blah`
+  a. `git clone https://github.com/jmevans0211/flag-fest.git`
   b. `npm start`
 2. In your browser (Chrome preferred) open [http://localhost:3000](http://localhost:3000) 
 3. Press **START GAME**

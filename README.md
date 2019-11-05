@@ -8,13 +8,14 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 
 #### How to Play
 
-1. In your terminal
+1. Go to [FlagFest](https://flag-fest.herokuapp.com/) to play!
+2. If preferred, skip step 1 and in your terminal:
 
   - `git clone https://github.com/jmevans0211/flag-fest.git`
   
   - `npm start`
   
-2. In your browser (Chrome preferred) open [http://localhost:3000](http://localhost:3000) 
+  - In your browser (Chrome preferred) open [http://localhost:3000](http://localhost:3000) 
 3. Press **START GAME**
 4. Select a region
 5. Select the amount of flags you would like to be quizzed on

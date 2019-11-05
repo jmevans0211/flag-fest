@@ -1,4 +1,4 @@
-# Flag Fest <img src="https://svgsilh.com/svg/1674807.svg" width=25 />
+# Flag Fest  <img src="https://svgsilh.com/svg/1674807.svg" width=13 />
 
 **Contributor:** [Jeannie Evans](https://github.com/jmevans0211/)
 

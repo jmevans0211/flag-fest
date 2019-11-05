@@ -59,7 +59,7 @@ export class GameContainer extends Component {
         {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed} />}
         {countries.length !== 0 && 
           <Link className="router-link" to="/">
-            <p>⏎ Start Over</p>
+            <p className="back-button">⏎ Start Over</p>
           </Link>
         }
       </main>

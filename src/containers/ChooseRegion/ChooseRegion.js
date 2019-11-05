@@ -48,7 +48,7 @@ export class ChooseRegion extends Component {
     const { saveCountries, handleError } = this.props
 
     try {
-      const countries = await fetchData('https://restcountries.eu/rest/v2/allDUDE')
+      const countries = await fetchData('https://restcountries.eu/rest/v2/all')
       const cleanCountriesData = await cleanCountryData(countries)
       const regionalData = await cleanCountriesData.filter(country => {
         return country.region === this.state.region

@@ -25,7 +25,7 @@ export const ResultsCard = ({ points, flagsGuessed, errorMessage }) => {
       </>
       }
       {errorMessage !== '' && 
-        <p>{errorMessage}</p>
+        <p className="error-message">{errorMessage}</p>
       }
     </main>
   )

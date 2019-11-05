@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { saveCountries, removeCountryGuessed } from './../../actions';
 import FlagCard from '../FlagCard/FlagCard';
-import ResultsCard from './../../components/ResultsCard/ResultsCard';
+import ResultsCard from '../ResultsCard/ResultsCard';
 
 export class GameContainer extends Component {
   constructor() {

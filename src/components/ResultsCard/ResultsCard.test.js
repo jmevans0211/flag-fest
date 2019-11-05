@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ResultsCard from './ResultsCard';
+import  {ResultsCard, mapStateToProps } from './ResultsCard';
 
 describe ('ResultsCard', () => {
   let wrapper;

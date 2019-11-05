@@ -140,5 +140,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(ChooseRegion);
 
 ChooseRegion.propTypes = {
   countries: PropTypes.array.isRequired,
-  saveCountries: PropTypes.func.isRequired,
+  saveCountries: PropTypes.func,
 }

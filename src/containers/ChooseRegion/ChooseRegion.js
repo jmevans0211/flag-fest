@@ -16,7 +16,6 @@ export class ChooseRegion extends Component {
       tenLimit: false,
       activeAmount: '',
     }
-  
   }
 
   handleRegion = (event, region) => {
@@ -49,7 +48,7 @@ export class ChooseRegion extends Component {
     const { saveCountries } = this.props
 
     try {
-      const countries = await fetchData('https://restcountries.eu/rest/v2/all')
+      const countries = await fetchData('https://restcountries.eu/rest/v2/allDUDE')
       const cleanCountriesData = await cleanCountryData(countries)
       const regionalData = await cleanCountriesData.filter(country => {
         return country.region === this.state.region
@@ -62,8 +61,8 @@ export class ChooseRegion extends Component {
         saveCountries(randomCountries)
         this.resetState()
       }
-    } catch(error) {
-      console.log('error', error.message)
+    } catch (error) {
+      console.log('Server side error please try again', error)
     }
   }
 

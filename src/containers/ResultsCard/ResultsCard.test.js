@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ResultsCard from './ResultsCard';
+import  {ResultsCard, mapStateToProps } from './ResultsCard';
 
 describe ('ResultsCard', () => {
   let wrapper;
@@ -29,4 +29,20 @@ describe ('ResultsCard', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+});
+
+describe('mapStateToProps', () => {
+  it('should return a string with an error message', () => {
+    const mockState = {
+      errorMessage : 'Error, please try again.',
+      filter: 'SAVE_COUNTRIES'
+    };
+    const expected = {
+      errorMessage: mockState.errorMessage
+    }
+
+      const mappedProps = mapStateToProps(mockState);
+
+      expect(mappedProps).toEqual(expected);
+    });
 });

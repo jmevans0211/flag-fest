@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { saveCountries } from './../../actions';
+import { saveCountries, handleError } from './../../actions';
 import { ChooseRegion, mapStateToProps, mapDispatchToProps } from './ChooseRegion';
 
 describe ('ChooseRegion', () => {
@@ -232,8 +232,19 @@ describe('mapDispatchToProps', () => {
     const actionToDispatch = saveCountries('SAVE_COUNTRIES', mockCountries);
     const mappedProps = mapDispatchToProps(mockDispatch);
 
-    mappedProps.saveCountries('SAVE_COUNTRIES', mockCountries)
+    mappedProps.saveCountries('SAVE_COUNTRIES', mockCountries);
 
-    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+  });
+
+  it('should handle an errorMessage', () => {
+    const mockError = 'Error, please try again.';
+    const mockDispatch = jest.fn();
+    const actionToDispatch = handleError('HANDLE_ERROR');
+    const mappedProps = mapDispatchToProps(mockDispatch);
+
+    mappedProps.handleError('HANDLE_ERROR', mockError);
+
+    expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
   });
 });

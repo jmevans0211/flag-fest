@@ -6,3 +6,8 @@ export const saveCountries = countries => ({
 export const removeCountryGuessed = () => ({
   type: 'REMOVE_COUNTRY_GUESSED',
 });
+
+export const handleError = errorMessage => ({
+  type: 'HANDLE_ERROR',
+  errorMessage
+});

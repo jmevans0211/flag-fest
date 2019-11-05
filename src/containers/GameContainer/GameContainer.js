@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { saveCountries, removeCountryGuessed } from './../../actions';
 import FlagCard from '../FlagCard/FlagCard';
-import ResultsCard from './../../components/ResultsCard/ResultsCard';
+import ResultsCard from '../ResultsCard/ResultsCard';
 
 export class GameContainer extends Component {
   constructor() {
@@ -59,7 +59,7 @@ export class GameContainer extends Component {
         {countries.length === 0 && <ResultsCard points={this.state.points} flagsGuessed={this.state.flagsGuessed} />}
         {countries.length !== 0 && 
           <Link className="router-link" to="/">
-            <p>⏎ Start Over</p>
+            <p className="back-button">⏎ Start Over</p>
           </Link>
         }
       </main>

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchData } from './../../utils/apiCalls';
 import { cleanCountryData } from './../../utils/helpers';
-import { saveCountries } from '../../actions';
+import { saveCountries, handleError } from '../../actions';
 import './ChooseRegion.scss'
 
 export class ChooseRegion extends Component {
@@ -16,7 +16,6 @@ export class ChooseRegion extends Component {
       tenLimit: false,
       activeAmount: '',
     }
-  
   }
 
   handleRegion = (event, region) => {
@@ -46,7 +45,7 @@ export class ChooseRegion extends Component {
   }
 
   filterCountries = async () => {
-    const { saveCountries } = this.props
+    const { saveCountries, handleError } = this.props
 
     try {
       const countries = await fetchData('https://restcountries.eu/rest/v2/all')
@@ -62,8 +61,8 @@ export class ChooseRegion extends Component {
         saveCountries(randomCountries)
         this.resetState()
       }
-    } catch(error) {
-      console.log('error', error.message)
+    } catch {
+      handleError('There was an error getting this regions maps. Please try again.')
     }
   }
 
@@ -133,12 +132,14 @@ export const mapStateToProps = state => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  saveCountries: countries => dispatch(saveCountries(countries))
+  saveCountries: countries => dispatch(saveCountries(countries)),
+  handleError: errorMessage => dispatch(handleError(errorMessage)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChooseRegion);
 
 ChooseRegion.propTypes = {
   countries: PropTypes.array.isRequired,
-  saveCountries: PropTypes.func.isRequired,
+  saveCountries: PropTypes.func,
+  handleError: PropTypes.func,
 }

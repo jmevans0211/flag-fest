@@ -30,9 +30,19 @@ describe('actions', () => {
   it('should have a type of REMOVE_COUNTRY_GUESSED', () => {
     const expectedAction = {
       type: 'REMOVE_COUNTRY_GUESSED',
-    }
+    };
 
     const result = actions.removeCountryGuessed();
+
+    expect(result).toEqual(expectedAction);
+  });
+
+  it('should have a type to HANDLE_ERROR', () => {
+    const expectedAction = {
+      type: 'HANDLE_ERROR',
+    };
+
+    const result = actions.handleError();
 
     expect(result).toEqual(expectedAction);
   });

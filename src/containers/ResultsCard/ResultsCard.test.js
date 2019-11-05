@@ -30,3 +30,19 @@ describe ('ResultsCard', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+
+describe('mapStateToProps', () => {
+  it('should return a string with an error message', () => {
+    const mockState = {
+      errorMessage : 'Error, please try again.',
+      filter: 'SAVE_COUNTRIES'
+    };
+    const expected = {
+      errorMessage: mockState.errorMessage
+    }
+
+      const mappedProps = mapStateToProps(mockState);
+
+      expect(mappedProps).toEqual(expected);
+    });
+});

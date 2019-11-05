@@ -40,4 +40,5 @@ export default connect(mapStateToProps, null)(ResultsCard);
 ResultsCard.propTypes = {
   points: PropTypes.number.isRequired,
   flagsGuessed: PropTypes.array.isRequired,
+  errorMessage: PropTypes.string,
 };

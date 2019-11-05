@@ -4,7 +4,7 @@
 
 #### About Flag Fest
 
-Flag Fest is a fun and interactive learning game where the user will learn country flags from a selected region of their choice.
+Flag Fest is a fun and interactive learning game where the user will learn country flags from a geographical region of their choice.
 
 #### How to Play
 
@@ -19,7 +19,7 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 4. Select a region
 5. Select the amount of flags you would like to be quizzed on
 6. Press **PLAY**
-7. For each flag, select which country you think that flag is from. Selecting a country will take you to the next flag.
+7. For each flag, select from two options which country you think that flag is from. Selecting a country will automatically take you to the next flag and tally your points.
 8. When finished, you will see your score, the correct answers, and an option to play again.
 
 **Have fun!**

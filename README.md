@@ -28,6 +28,8 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 
 **Have fun!**
 
+![Selecting a Region](https://user-images.githubusercontent.com/48900496/68165704-55323900-ff1d-11e9-830b-631dc4a90ca9.png)
+
 ### A Sneak Peak
 
 <details>

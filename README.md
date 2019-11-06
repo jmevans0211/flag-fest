@@ -17,7 +17,8 @@ Flag Fest is a fun and interactive learning game where the user will learn count
 
    `npm start`
   
-  - In your browser (Chrome preferred) open [http://localhost:3000](http://localhost:3000) 
+   In your browser (Chrome preferred) open [http://localhost:3000](http://localhost:3000) 
+   
 3. Press **START GAME**
 4. Select a region
 5. Select the amount of flags you would like to be quizzed on

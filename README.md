@@ -2,9 +2,7 @@
 
 **Contributor:** [Jeannie Evans](https://github.com/jmevans0211/)
 
-#### About Flag Fest
-
-Flag Fest is a fun and interactive learning game where the user will learn country flags from a geographical region of their choice.
+**Flag Fest** is a fun and interactive learning game where the user will learn country flags from a geographical region of their choice.
 
 #### How to Play
 
